@@ -3,51 +3,53 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>IZO-KING — Test demand before you build the wrong offer</title>
-<meta name="description" content="Practical systems for freelancers and small businesses: validate demand in 7 days, package your service clearly, and stop unpaid scope creep. Instant delivery on Whop." />
-<meta property="og:title" content="IZO-KING — Test demand before you build the wrong offer" />
-<meta property="og:description" content="Most offers fail because demand was assumed. Fix that in 7 days — or package your service so clients can say yes." />
+<title>IZO-KING — Practical tools for freelancers who need clarity this week</title>
+<meta name="description" content="Validate demand, package your offer, track clients and invoices, and review high-stakes deals. Instant digital delivery on Whop. Educational systems only — no income guarantees." />
+<meta property="og:title" content="IZO-KING — Test demand. Package offers. Get paid." />
+<meta property="og:description" content="Practical systems for freelancers and small businesses. One-time tools and focused services on Whop." />
+<meta name="theme-color" content="#0b1220" />
 <style>
 :root{--navy:#0b1220;--navy2:#121c2e;--gold:#d4a017;--gold2:#f0c14b;--cream:#f7f4ee;--muted:#9aa6b2;--card:#151f33;--line:rgba(212,160,23,.25)}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--navy);color:var(--cream);line-height:1.55}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--line)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,18,32,.92);backdrop-filter:blur(8px);z-index:10}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.04em}
-.logo-mark{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--gold2),var(--gold) 55%,#8a6a00);display:grid;place-items:center;color:#0b1220;font-size:12px;font-weight:900}
-nav a{color:var(--muted);margin-left:18px;font-size:14px}
+.logo-mark{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--gold2),var(--gold) 55%,#8a6a00);display:grid;place-items:center;color:#0b1220;font-size:11px;font-weight:900}
+nav a{color:var(--muted);margin-left:16px;font-size:14px}
 nav a:hover{color:var(--gold2)}
-.hero{padding:64px 0 40px;display:grid;gap:22px}
+.hero{padding:56px 0 36px;display:grid;gap:18px}
 .badge{display:inline-block;border:1px solid var(--line);color:var(--gold2);padding:6px 12px;border-radius:999px;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
-h1{font-size:clamp(28px,5vw,46px);line-height:1.15;max-width:18ch}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15;max-width:20ch}
 h1 span{color:var(--gold2)}
-.lead{color:var(--muted);max-width:54ch;font-size:18px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:10px;font-weight:700;font-size:15px;transition:.15s ease}
+.lead{color:var(--muted);max-width:56ch;font-size:17px}
+.pain{color:#c9d2dc;font-size:15px;max-width:58ch;border-left:3px solid var(--gold);padding-left:14px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:10px;font-weight:700;font-size:14px;transition:.15s ease;text-align:center}
 .btn-primary{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#111;box-shadow:0 8px 24px rgba(212,160,23,.25)}
 .btn-primary:hover{transform:translateY(-1px)}
 .btn-ghost{border:1px solid var(--line);color:var(--cream)}
 .btn-ghost:hover{border-color:var(--gold)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;padding:20px 0 60px}
-.card{background:linear-gradient(180deg,var(--card),var(--navy2));border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px;min-height:300px}
-.card.featured{border-color:rgba(240,193,75,.55);box-shadow:0 0 0 1px rgba(240,193,75,.15)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;padding:16px 0 48px}
+.card{background:linear-gradient(180deg,var(--card),var(--navy2));border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;min-height:280px}
+.card.featured{border-color:rgba(240,193,75,.55);box-shadow:0 0 0 1px rgba(240,193,75,.12)}
 .tag{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2);font-weight:700}
-.price{font-size:28px;font-weight:800;color:var(--gold2)}
-.price small{font-size:13px;color:var(--muted);font-weight:500}
-.card h3{font-size:20px}
-.card p{color:var(--muted);font-size:14px;flex:1}
-.card ul{list-style:none;color:#d7dde6;font-size:13px;display:grid;gap:6px}
+.price{font-size:26px;font-weight:800;color:var(--gold2)}
+.price small{font-size:12px;color:var(--muted);font-weight:500}
+.card h3{font-size:18px}
+.card p{color:var(--muted);font-size:13.5px;flex:1}
+.card ul{list-style:none;color:#d7dde6;font-size:13px;display:grid;gap:5px}
 .card ul li::before{content:"✓ ";color:var(--gold)}
-.section{padding:10px 0 50px}
-.section h2{font-size:24px;margin-bottom:10px}
+.section{padding:8px 0 40px}
+.section h2{font-size:22px;margin-bottom:8px}
 .section p{color:var(--muted);max-width:62ch}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:18px}
-.step{border:1px solid var(--line);border-radius:12px;padding:16px;background:rgba(255,255,255,.02)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:16px}
+.step{border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(255,255,255,.02);font-size:14px}
 .step strong{color:var(--gold2);display:block;margin-bottom:6px}
-footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
-.note{font-size:12px;color:#7f8b98;margin-top:8px}
-.pain{color:#c9d2dc;font-size:15px;max-width:56ch;border-left:3px solid var(--gold);padding-left:14px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+.note{font-size:12px;color:#7f8b98}
+.band{background:rgba(212,160,23,.06);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:10px 0 28px}
 </style>
 </head>
 <body>
@@ -55,91 +57,154 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 <header>
   <div class="logo"><div class="logo-mark">IZO</div><span>IZO-KING</span></div>
   <nav>
-    <a href="#products">Tools</a>
-    <a href="#how">How it works</a>
-    <a href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Start for $7</a>
+    <a href="#starters">Starters</a>
+    <a href="#ops">Operations</a>
+    <a href="#pro">Pro</a>
+    <a href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Buy on Whop</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="badge">Instant access on Whop · No monthly lock-in on starter tools</div>
-  <h1>Most offers fail for one quiet reason: <span>demand was assumed</span>.</h1>
-  <p class="pain">You spent weeks building. Then silence. The fix is not more motivation — it is a small daily test that tells you keep, narrow, or pause before you waste another month.</p>
-  <p class="lead">IZO-KING tools are short, practical systems for freelancers and small businesses: validate demand, package a service clients understand, and move with evidence — not hope.</p>
+  <div class="badge">Whop marketplace · Instant digital access</div>
+  <h1>Build less on hope. <span>Decide with signals.</span></h1>
+  <p class="pain">Most offers fail because demand was assumed. Clients go unpaid because invoices live in five places. Scope creeps because the proposal never drew a line.</p>
+  <p class="lead">IZO-KING is a focused toolkit for freelancers, consultants, and small operators: validate demand, package the offer, run clients and invoices, and review high-stakes deals — without another bloated SaaS.</p>
   <div class="cta-row">
-    <a class="btn btn-primary" href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Validate your offer in 7 days — $7</a>
-    <a class="btn btn-ghost" href="#products">Compare the three tools</a>
+    <a class="btn btn-primary" href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Start with Offer Signal Lab — $7</a>
+    <a class="btn btn-ghost" href="#ops">See CRM & Proposal kits</a>
   </div>
-  <p class="note">Educational systems only. Results depend on your market and execution. No income is guaranteed.</p>
+  <p class="note">Educational systems and digital services only. No income, sales, or deal outcomes are guaranteed.</p>
 </section>
 
-<section id="products" class="section">
-  <h2>Pick the problem you have this week</h2>
-  <p>One clear job per tool. One-time price. Instant digital delivery after checkout on Whop.</p>
+<section id="starters" class="section">
+  <h2>Starter tools — one problem, one week</h2>
+  <p>One-time purchase. Instant access on Whop after checkout.</p>
   <div class="grid">
     <article class="card">
-      <div class="tag">Best if you need structure today</div>
-      <div class="price">$5 <small>one-time</small></div>
+      <div class="tag">Light entry</div>
+      <div class="price">$15 <small>one-time</small></div>
       <h3>7-Day Offer Test Checklist</h3>
-      <p><strong style="color:#e8eef5">Problem:</strong> You keep “thinking about launching” without a simple daily action.</p>
-      <p>One small market test per day. Log interest, objections, and silence. End the week with a decision: keep, narrow, reposition, or pause.</p>
+      <p><strong style="color:#e8eef5">Problem:</strong> You keep planning a launch without a daily market test.</p>
+      <p>One test per day. Log interest, objections, silence. End with keep / narrow / pause.</p>
       <ul>
-        <li>Day-by-day test prompts</li>
-        <li>Signal log (interest / objection / silence)</li>
+        <li>Day-by-day prompts</li>
+        <li>Signal log</li>
         <li>Decision box on day 7</li>
       </ul>
-      <a class="btn btn-primary" href="https://whop.com/checkout/plan_ZDX9AyVWu3q7F">Get the checklist — $5</a>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_ZDX9AyVWu3q7F">Get the checklist</a>
     </article>
 
     <article class="card featured">
       <div class="tag">Most popular starter</div>
       <div class="price">$7 <small>one-time</small></div>
       <h3>Offer Signal Lab</h3>
-      <p><strong style="color:#e8eef5">Problem:</strong> You are building a full offer before you know if anyone wants it.</p>
-      <p>A complete 7-day demand-validation sprint. Run one test a day, record real market signals, then decide with evidence — before the expensive launch.</p>
+      <p><strong style="color:#e8eef5">Problem:</strong> You are building the full offer before anyone has shown demand.</p>
+      <p>A complete 7-day demand-validation sprint with clear keep / reposition / pause rules.</p>
       <ul>
-        <li>Full 7-day validation playbook</li>
+        <li>Full validation playbook</li>
         <li>What counts as a real signal</li>
-        <li>Clear keep / reposition / pause rules</li>
+        <li>Decision framework</li>
       </ul>
-      <a class="btn btn-primary" href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Start Offer Signal Lab — $7</a>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Start Offer Signal Lab</a>
     </article>
 
     <article class="card">
-      <div class="tag">Best if clients already ask</div>
+      <div class="tag">When clients already ask</div>
       <div class="price">$9 <small>one-time</small></div>
       <h3>Client Offer Engine</h3>
-      <p><strong style="color:#e8eef5">Problem:</strong> You have a skill — but no clear offer, price, or outreach plan.</p>
-      <p>Turn one service into a buyable offer: ideal buyer, deliverable, price structure, one-page offer, objection responses, and a 7-day outreach board.</p>
+      <p><strong style="color:#e8eef5">Problem:</strong> You have a skill but no clear offer, price, or outreach plan.</p>
+      <p>Package one service: buyer, deliverable, price, one-page offer, objections, 7-day outreach.</p>
       <ul>
-        <li>Offer clarity + packaging worksheets</li>
-        <li>Transparent price structure</li>
-        <li>7-day outreach + objection library</li>
+        <li>Packaging worksheets</li>
+        <li>Price structure</li>
+        <li>Outreach + objection library</li>
       </ul>
-      <a class="btn btn-primary" href="https://whop.com/checkout/plan_cPp7C1NvoDc4S">Build your offer — $9</a>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_cPp7C1NvoDc4S">Build your offer</a>
     </article>
   </div>
 </section>
 
-<section id="how" class="section">
-  <h2>From click to clarity in three steps</h2>
-  <div class="steps">
-    <div class="step"><strong>1. Choose the bottleneck</strong>No demand data yet? Start with validation. Already talking to clients? Use Client Offer Engine.</div>
-    <div class="step"><strong>2. Checkout once on Whop</strong>Secure payment. Instant access. No forced subscription on these starter tools.</div>
-    <div class="step"><strong>3. Run the system this week</strong>Follow the daily steps. Write what the market actually said — then decide.</div>
+<section id="ops" class="section">
+  <h2>Operations — clients, invoices, scope</h2>
+  <div class="band">
+    <strong style="color:var(--gold2)">New on marketplace:</strong> Freelancer CRM (Excel) and Proposal & Scope Kit — built for solo operators who do not want another monthly SaaS.
+  </div>
+  <div class="grid">
+    <article class="card featured">
+      <div class="tag">Operations</div>
+      <div class="price">$19 <small>one-time</small></div>
+      <h3>Freelancer CRM & Invoice Tracker (Excel)</h3>
+      <p><strong style="color:#e8eef5">Problem:</strong> Clients and overdue invoices live in chats, notes, and memory.</p>
+      <p>One Excel system: clients, pipeline, invoices, overdue flags, follow-ups. No monthly fee.</p>
+      <ul>
+        <li>Client database + pipeline</li>
+        <li>Invoice log + overdue flags</li>
+        <li>Follow-up structure</li>
+      </ul>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_ORilBGofkjFM3">Get the Excel CRM — $19</a>
+    </article>
+
+    <article class="card">
+      <div class="tag">Scope control</div>
+      <div class="price">$15 <small>one-time</small></div>
+      <h3>Freelance Proposal & Scope Kit</h3>
+      <p><strong style="color:#e8eef5">Problem:</strong> Vague briefs turn into unpaid extras.</p>
+      <p>Proposal structure, scope boundaries, revision policy language, and anti–scope-creep scripts.</p>
+      <ul>
+        <li>Proposal template structure</li>
+        <li>Scope worksheet</li>
+        <li>Copy-paste scripts</li>
+      </ul>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_ZaQZw57HVl6cQ">Get the Scope Kit — $15</a>
+    </article>
+  </div>
+</section>
+
+<section id="pro" class="section">
+  <h2>Pro — when the deal is live</h2>
+  <div class="grid">
+    <article class="card">
+      <div class="tag">Software · monthly</div>
+      <div class="price">$39 <small>/ month</small></div>
+      <h3>NextStep Pro</h3>
+      <p>Evidence-led next actions for active B2B opportunities — without another full CRM migration.</p>
+      <ul>
+        <li>Known / Inferred / Unknown signals</li>
+        <li>One practical next action</li>
+        <li>Member hub access</li>
+      </ul>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_zvqf30LtnPirA">Open NextStep Pro</a>
+    </article>
+
+    <article class="card featured">
+      <div class="tag">Done-with-you · one deal</div>
+      <div class="price">$129 <small>one-time</small></div>
+      <h3>NextStep Deal Review</h3>
+      <p>One structured decision brief for one high-stakes B2B opportunity. You submit context; you get clarity and a next action.</p>
+      <ul>
+        <li>Risk + missing context</li>
+        <li>One recommended next move</li>
+        <li>Private member hub delivery</li>
+      </ul>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_ju8M64yYN8F4a">Book a Deal Review — $129</a>
+    </article>
   </div>
 </section>
 
 <section class="section">
-  <h2>Who this is for</h2>
-  <p>Freelancers, consultants, creators, and small operators who want a clear next action — not another long course. If you need a full done-for-you agency, this is not that. If you need a practical system you can finish in days, start here.</p>
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><strong>1. Pick the bottleneck</strong>No demand data → validation. Messy clients → CRM. Live B2B deal → Deal Review.</div>
+    <div class="step"><strong>2. Checkout on Whop</strong>Secure payment. Instant digital access. Starter tools are one-time.</div>
+    <div class="step"><strong>3. Run it this week</strong>Follow the system. Write what the market said. Decide.</div>
+  </div>
 </section>
 
 <footer>
-  <div>© IZO-KING / ISMAIL GROUP · Practical digital tools<br><span style="font-size:11px">No income claims. Execution and market conditions determine outcomes.</span></div>
+  <div>© IZO-KING / ISMAIL GROUP · Practical digital tools<br><span class="note">No income claims. Execution and market conditions determine outcomes. Templates are not legal or accounting advice.</span></div>
   <div>
     <a href="https://x.com/ISMAILGROUPAI">X</a> ·
-    <a href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Buy on Whop</a>
+    <a href="https://whop.com/">Whop store</a>
   </div>
 </footer>
 </div>
