@@ -13,119 +13,104 @@
 <meta property="og:url" content="https://izo-king-storefront-ismails-projects-325f8bd4.vercel.app/" />
 <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0825/2093/2576/files/rn-image_picker_lib_temp_97604008-5f69-48e1-91d0-076aa9e51009.png?v=1788746838" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="IZO — Useful digital tools, made for real life" />
-<meta name="twitter:description" content="Focused templates and systems for freelancers, students, creators and small businesses." />
 <meta name="theme-color" content="#111827" />
 <link rel="preconnect" href="https://cdn.shopify.com" crossorigin />
 <link rel="preconnect" href="https://assets-2-prod.whop.com" crossorigin />
 <style>
-:root{
-  --navy:#111827;--ivory:#FAF9F6;--beige:#F1EDE5;--gold:#B08D3C;--forest:#315C4A;
-  --charcoal:#252525;--white:#FFFFFF;--muted:#5c5c5c;--line:rgba(17,24,39,.09);
-  --shadow:0 14px 40px rgba(17,24,39,.08);--radius:16px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;background:var(--ivory);color:var(--charcoal);line-height:1.55;-webkit-font-smoothing:antialiased}
+:root{--navy:#111827;--ivory:#FAF9F6;--beige:#F1EDE5;--gold:#B08D3C;--forest:#315C4A;--charcoal:#252525;--white:#FFFFFF;--muted:#5c5c5c;--line:rgba(17,24,39,.09);--shadow:0 14px 40px rgba(17,24,39,.08);--radius:16px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Segoe UI,system-ui,-apple-system,sans-serif;background:var(--ivory);color:var(--charcoal);line-height:1.55;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .site-header{position:sticky;top:0;z-index:40;background:rgba(250,249,246,.94);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
 .site-header.scrolled{border-bottom-color:var(--line);box-shadow:0 4px 24px rgba(17,24,39,.05)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;letter-spacing:.02em;color:var(--navy)}
-.brand-mark{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:11px;font-weight:800;letter-spacing:.04em;flex-shrink:0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--navy)}
+.brand-mark{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:11px;font-weight:800;flex-shrink:0}
 .nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;font-size:14px}
-.nav a{color:var(--muted);transition:color .2s}.nav a:hover{color:var(--navy)}
+.nav a{color:var(--muted)}.nav a:hover{color:var(--navy)}
 .nav .btn-sm{background:var(--navy);color:var(--ivory);padding:9px 16px;border-radius:999px;font-size:13px;font-weight:600}
-.nav .btn-sm:hover{background:var(--charcoal);color:var(--ivory)}
 .search-wrap{position:relative}
-.search-wrap input{border:1px solid var(--line);background:var(--white);border-radius:999px;padding:9px 14px 9px 36px;font-size:13px;width:min(170px,30vw);outline:none;transition:border-color .2s}
-.search-wrap input:focus{border-color:rgba(176,141,60,.45)}
-.search-wrap::before{content:"⌕";position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px;pointer-events:none}
+.search-wrap input{border:1px solid var(--line);background:var(--white);border-radius:999px;padding:9px 14px 9px 36px;font-size:13px;width:min(170px,30vw);outline:none}
+.search-wrap::before{content:"⌕";position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
 @media(max-width:760px){.nav a:not(.btn-sm){display:none}.search-wrap input{width:120px}}
 .hero{padding:56px 0 44px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:32px;padding:40px 0 32px}}
 .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
 .hero h1{font-size:clamp(30px,4.5vw,46px);line-height:1.15;color:var(--navy);font-weight:700;letter-spacing:-.025em;margin-bottom:16px;max-width:16ch}
-.hero p.lead{font-size:17px;color:var(--muted);max-width:42ch;margin-bottom:26px;line-height:1.6}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:42ch;margin-bottom:26px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .2s,background .2s,box-shadow .2s;border:none;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .2s,background .2s;border:none;cursor:pointer}
 .btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--navy);color:var(--ivory);box-shadow:0 8px 24px rgba(17,24,39,.14)}
-.btn-primary:hover{background:var(--charcoal)}
-.btn-secondary{background:var(--beige);color:var(--navy);border:1px solid var(--line)}
+.btn-primary{background:var(--navy);color:var(--ivory)}.btn-secondary{background:var(--beige);color:var(--navy);border:1px solid var(--line)}
 .hero-stage{position:relative;min-height:280px}
-.main-shot{border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden;background:var(--beige);transform:rotate(-1.2deg);transition:transform .4s}
-.main-shot:hover{transform:rotate(0)}
+.main-shot{border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden;background:var(--beige)}
 .main-shot img{width:100%;aspect-ratio:1;object-fit:cover}
-.hero-float{position:absolute;right:-6px;bottom:16px;width:40%;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:var(--white);transform:rotate(2.5deg);transition:transform .35s}
-.hero-float:hover{transform:rotate(0)}
+.hero-float{position:absolute;right:-6px;bottom:16px;width:40%;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:var(--white)}
 .hero-float img{aspect-ratio:1;object-fit:cover;width:100%}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
-.reveal.in{opacity:1;transform:none}
-.section{padding:52px 0}
-.section.alt{background:var(--beige)}
+/* Content visible by default — animation only when motion is OK */
+.reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+  .reveal.in{opacity:1;transform:none}
+}
+.section{padding:52px 0}.section.alt{background:var(--beige)}
 .section-head{margin-bottom:28px}
-.section-head h2{font-size:clamp(22px,3vw,30px);letter-spacing:-.02em;color:var(--navy);margin-bottom:8px}
+.section-head h2{font-size:clamp(22px,3vw,30px);color:var(--navy);margin-bottom:8px}
 .section-head p{color:var(--muted);font-size:15px;max-width:48ch}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.chip{font-size:12px;padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--muted);cursor:pointer;transition:all .2s;font-family:inherit}
+.chip{font-size:12px;padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--muted);cursor:pointer;font-family:inherit}
 .chip:hover,.chip.active{background:var(--navy);color:var(--ivory);border-color:var(--navy)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
-.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .28s ease,box-shadow .28s ease}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .28s,box-shadow .28s}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .card-media{aspect-ratio:1;background:var(--beige);overflow:hidden;position:relative}
-.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
 .card:hover .card-media img{transform:scale(1.03)}
 .card-media .ph{width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-start;padding:22px;background:linear-gradient(165deg,var(--beige),#e8e2d6)}
-.badge{position:absolute;top:10px;left:10px;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--white);color:var(--navy);padding:5px 9px;border-radius:6px;border:1px solid var(--line);z-index:1}
+.badge{position:absolute;top:10px;left:10px;font-size:10px;font-weight:700;text-transform:uppercase;background:var(--white);color:var(--navy);padding:5px 9px;border-radius:6px;border:1px solid var(--line);z-index:1}
 .card-body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .card-body h3{font-size:14px;line-height:1.4;font-weight:650;color:var(--navy)}
-.card-body .vp{font-size:13px;color:var(--muted);line-height:1.45;flex:1}
-.card-meta{display:flex;justify-content:space-between;align-items:center;margin-top:4px}
-.price{font-weight:700;color:var(--navy);font-size:16px}
-.platform{font-size:11px;color:var(--gold);font-weight:600}
-.cta{margin-top:12px;display:block;text-align:center;background:var(--forest);color:var(--white);padding:11px 12px;border-radius:10px;font-size:13px;font-weight:600;transition:background .2s,transform .2s}
-.cta:hover{background:#274a3c;transform:translateY(-1px);color:var(--white)}
+.card-body .vp{font-size:13px;color:var(--muted);flex:1}
+.card-meta{display:flex;justify-content:space-between;align-items:center}
+.price{font-weight:700;color:var(--navy);font-size:16px}.platform{font-size:11px;color:var(--gold);font-weight:600}
+.cta{margin-top:12px;display:block;text-align:center;background:var(--forest);color:var(--white);padding:11px 12px;border-radius:10px;font-size:13px;font-weight:600}
+.cta:hover{background:#274a3c;color:var(--white)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 @media(max-width:720px){.steps{grid-template-columns:1fr 1fr}}
-.step{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px;transition:transform .25s}
-.step:hover{transform:translateY(-3px)}
+.step{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px}
 .step .n{font-size:12px;color:var(--gold);font-weight:700;margin-bottom:8px}
-.step h3{font-size:15px;margin-bottom:6px;color:var(--navy)}.step p{font-size:13px;color:var(--muted)}
+.step h3{font-size:15px;margin-bottom:6px}.step p{font-size:13px;color:var(--muted)}
 .strip{display:grid;grid-template-columns:1.15fr 1fr;gap:36px;align-items:center}
 @media(max-width:720px){.strip{grid-template-columns:1fr}}
-.strip h2{font-size:26px;margin-bottom:12px;letter-spacing:-.02em;color:var(--navy)}
-.strip p{color:var(--muted);margin-bottom:10px}
-.strip a.more{color:var(--forest);font-weight:600}
-footer{background:var(--navy);color:#b8c0cc;padding:52px 0 32px;font-size:13px}
-footer a{color:#b8c0cc}footer a:hover{color:var(--ivory)}
+.strip h2{font-size:26px;margin-bottom:12px;color:var(--navy)}.strip p{color:var(--muted);margin-bottom:10px}.strip a.more{color:var(--forest);font-weight:600}
+footer{background:var(--navy);color:#b8c0cc;padding:52px 0 32px;font-size:13px}footer a{color:#b8c0cc}footer a:hover{color:var(--ivory)}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:24px;margin-bottom:32px}
 @media(max-width:720px){.foot-grid{grid-template-columns:1fr 1fr}}
 .foot-grid strong{display:block;color:var(--ivory);margin-bottom:12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .foot-grid a{display:block;margin:6px 0}
-.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--ivory);font-weight:700;font-size:15px}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--ivory);font-weight:700}
 .foot-brand .brand-mark{width:32px;height:32px;font-size:9px}
-#chat-btn{position:fixed;bottom:22px;right:22px;z-index:50;border:none;background:var(--navy);color:var(--ivory);padding:14px 18px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 10px 32px rgba(17,24,39,.28);font-family:inherit}
-#chat-btn:hover{background:var(--charcoal)}
+#chat-btn{position:fixed;bottom:22px;right:22px;z-index:50;border:none;background:var(--navy);color:var(--ivory);padding:14px 18px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
 #chat-panel{position:fixed;bottom:80px;right:22px;width:min(360px,calc(100vw - 28px));background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:0 20px 50px rgba(17,24,39,.18);z-index:50;display:none;flex-direction:column;overflow:hidden;max-height:72vh}
 #chat-panel.open{display:flex}
-.chat-h{padding:14px 16px;background:var(--beige);border-bottom:1px solid var(--line);font-weight:700;font-size:14px;display:flex;justify-content:space-between;align-items:center}
-.chat-h button{border:none;background:none;font-size:20px;cursor:pointer;color:var(--muted);line-height:1;padding:0 4px}
+.chat-h{padding:14px 16px;background:var(--beige);border-bottom:1px solid var(--line);font-weight:700;font-size:14px;display:flex;justify-content:space-between}
+.chat-h button{border:none;background:none;font-size:20px;cursor:pointer;color:var(--muted)}
 .chat-b{padding:14px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:8px;min-height:160px;max-height:280px}
 .msg{padding:10px 12px;border-radius:12px;font-size:13px;max-width:92%;line-height:1.45}
 .msg.bot{background:var(--beige);align-self:flex-start}.msg.user{background:var(--navy);color:var(--ivory);align-self:flex-end}
 .chat-q{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 10px}
 .chat-q button{font-size:11px;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--ivory);cursor:pointer;color:var(--muted);font-family:inherit}
-.chat-q button:hover{border-color:var(--gold);color:var(--navy)}
 .chat-f{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}
 .chat-f input{flex:1;border:1px solid var(--line);border-radius:10px;padding:11px;font-size:13px;outline:none;font-family:inherit}
 .chat-f button{background:var(--forest);color:#fff;border:none;border-radius:10px;padding:0 16px;font-weight:600;cursor:pointer;font-family:inherit}
 .empty-msg{color:var(--muted);padding:24px 0;grid-column:1/-1}
+noscript .noscript-warn{padding:16px;background:#fff3cd;color:#664d03;text-align:center}
 </style>
 </head>
 <body>
+<noscript><div class="noscript-warn">Please enable JavaScript to browse the product catalog. Contact: maanizozo9@gmail.com</div></noscript>
 <header class="site-header" id="hdr">
   <div class="wrap header-inner">
     <a class="brand" href="/" aria-label="IZO home"><span class="brand-mark" aria-hidden="true">IZO</span><span>IZO</span></a>
@@ -139,10 +124,9 @@ footer a{color:#b8c0cc}footer a:hover{color:var(--ivory)}
     </nav>
   </div>
 </header>
-
 <main>
 <section class="hero wrap">
-  <div class="reveal">
+  <div class="reveal in">
     <p class="eyebrow">IZO digital studio</p>
     <h1>Useful digital tools, made for real life.</h1>
     <p class="lead">Focused templates and systems for freelancers, students, creators and small businesses.</p>
@@ -151,16 +135,15 @@ footer a{color:#b8c0cc}footer a:hover{color:var(--ivory)}
       <a class="btn btn-secondary" href="#shop">Find Your Tool</a>
     </div>
   </div>
-  <div class="hero-stage reveal">
+  <div class="hero-stage reveal in">
     <div class="main-shot">
-      <img src="https://cdn.shopify.com/s/files/1/0825/2093/2576/files/rn-image_picker_lib_temp_97604008-5f69-48e1-91d0-076aa9e51009.png?v=1788746838" alt="Freelancer CRM and Invoice Tracker Excel template product image" width="520" height="520" fetchpriority="high" />
+      <img src="https://cdn.shopify.com/s/files/1/0825/2093/2576/files/rn-image_picker_lib_temp_97604008-5f69-48e1-91d0-076aa9e51009.png?v=1788746838" alt="Freelancer CRM Excel template" width="520" height="520" fetchpriority="high" />
     </div>
     <div class="hero-float">
-      <img src="https://cdn.shopify.com/s/files/1/0825/2093/2576/files/rn-image_picker_lib_temp_caffc985-1a22-4682-bf5b-02fd370080df.png?v=1788405495" alt="The Clear Start ADHD-friendly daily and weekly planner product image" width="220" height="220" loading="lazy" />
+      <img src="https://cdn.shopify.com/s/files/1/0825/2093/2576/files/rn-image_picker_lib_temp_caffc985-1a22-4682-bf5b-02fd370080df.png?v=1788405495" alt="Clear Start ADHD planner" width="220" height="220" loading="lazy" />
     </div>
   </div>
 </section>
-
 <section class="section" id="shop">
   <div class="wrap">
     <div class="section-head">
@@ -181,13 +164,9 @@ footer a{color:#b8c0cc}footer a:hover{color:var(--ivory)}
     <div class="grid" id="grid" role="list"></div>
   </div>
 </section>
-
 <section class="section alt" id="how">
   <div class="wrap">
-    <div class="section-head">
-      <h2>How it works</h2>
-      <p>From browse to download in a few clear steps.</p>
-    </div>
+    <div class="section-head"><h2>How it works</h2><p>From browse to download in a few clear steps.</p></div>
     <div class="steps">
       <div class="step reveal"><div class="n">01</div><h3>Choose your tool</h3><p>Filter by need or platform.</p></div>
       <div class="step reveal"><div class="n">02</div><h3>Complete checkout</h3><p>Secure payment on Shopify, Whop or Payhip.</p></div>
@@ -196,231 +175,116 @@ footer a{color:#b8c0cc}footer a:hover{color:var(--ivory)}
     </div>
   </div>
 </section>
-
 <section class="section">
   <div class="wrap strip">
     <div class="reveal">
       <h2>About IZO</h2>
       <p>IZO creates practical digital tools designed to simplify everyday work, organization, study and business.</p>
-      <p>Clear, usable content you can apply when you open it — not another unread pile of advice.</p>
       <p><a class="more" href="about.html">Read more →</a></p>
     </div>
     <div class="reveal" style="background:var(--beige);border-radius:16px;padding:24px;border:1px solid var(--line)">
       <p style="font-size:15px;color:var(--muted)">Support: <a href="mailto:maanizozo9@gmail.com" style="color:var(--navy);font-weight:600">maanizozo9@gmail.com</a></p>
-      <p style="font-size:14px;color:var(--muted);margin-top:10px">Educational tools only. No income guarantees. No fabricated reviews or sales figures.</p>
     </div>
   </div>
 </section>
 </main>
-
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <div class="foot-brand"><span class="brand-mark" aria-hidden="true">IZO</span><span>IZO</span></div>
-        <p>Practical digital tools for work, study and small business structure.</p>
-      </div>
-      <div>
-        <strong>Shop</strong>
-        <a href="#shop">All products</a>
-        <a href="https://izo-king.myshopify.com/" target="_blank" rel="noopener">Shopify</a>
-        <a href="https://payhip.com/IZOKINGSTUDIO" target="_blank" rel="noopener">Payhip</a>
-        <a href="https://whop.com/" target="_blank" rel="noopener">Whop</a>
-      </div>
-      <div>
-        <strong>Social</strong>
+      <div><div class="foot-brand"><span class="brand-mark">IZO</span><span>IZO</span></div><p>Practical digital tools for work, study and small business.</p></div>
+      <div><strong>Shop</strong><a href="#shop">All products</a><a href="https://izo-king.myshopify.com/" target="_blank" rel="noopener">Shopify</a><a href="https://payhip.com/IZOKINGSTUDIO" target="_blank" rel="noopener">Payhip</a></div>
+      <div><strong>Social</strong>
         <a href="https://www.instagram.com/izo_king_studio" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.facebook.com/share/1S9Ka8GxB2/" target="_blank" rel="noopener">Facebook</a>
         <a href="https://x.com/ISMAILGROUPAI" target="_blank" rel="noopener">X / Twitter</a>
-        <a href="https://share.google/esz5II3WqJy4L4D5k" target="_blank" rel="noopener">Google Maps</a>
       </div>
-      <div>
-        <strong>Help</strong>
-        <a href="about.html">About</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-        <a href="mailto:maanizozo9@gmail.com">Email</a>
-      </div>
-      <div>
-        <strong>Legal</strong>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="faq.html">Refund policy</a>
-      </div>
+      <div><strong>Help</strong><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="mailto:maanizozo9@gmail.com">Email</a></div>
+      <div><strong>Legal</strong><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
     </div>
     <p style="opacity:.7">© 2026 IZO / ISMAIL GROUP · maanizozo9@gmail.com</p>
   </div>
 </footer>
-
-<button type="button" id="chat-btn" aria-label="Open product help chat">Need help choosing?</button>
-<div id="chat-panel" role="dialog" aria-label="Product help" aria-modal="true">
-  <div class="chat-h"><span>Need help choosing a product?</span><button type="button" id="chat-x" aria-label="Close chat">×</button></div>
-  <div class="chat-b" id="chat-b"><div class="msg bot">Hi. Ask which tool fits your situation — invoices, ADHD planning, offers, finance, and more. Answers are based only on products listed on this site. For human support: maanizozo9@gmail.com</div></div>
+<button type="button" id="chat-btn" aria-label="Open help">Need help choosing?</button>
+<div id="chat-panel" role="dialog" aria-label="Product help">
+  <div class="chat-h"><span>Need help choosing a product?</span><button type="button" id="chat-x" aria-label="Close">×</button></div>
+  <div class="chat-b" id="chat-b"><div class="msg bot">Hi. Ask which tool fits — invoices, ADHD, offers, finance. Answers use only products on this site. Support: maanizozo9@gmail.com</div></div>
   <div class="chat-q">
     <button type="button" data-q="What is best for freelancers tracking invoices?">Invoices</button>
-    <button type="button" data-q="ADHD planner options">ADHD planners</button>
+    <button type="button" data-q="ADHD planner options">ADHD</button>
     <button type="button" data-q="How do I get my download?">Delivery</button>
     <button type="button" data-q="Offer validation tools">Offers</button>
-    <button type="button" data-q="Scope creep and proposals">Proposals</button>
   </div>
-  <div class="chat-f"><input id="chat-in" type="text" placeholder="Ask a question…" maxlength="400" aria-label="Chat message" /><button type="button" id="chat-go">Send</button></div>
+  <div class="chat-f"><input id="chat-in" type="text" placeholder="Ask a question…" maxlength="400" /><button type="button" id="chat-go">Send</button></div>
 </div>
-
 <script src="products.js"></script>
 <script>
 (function(){
-  const PRODUCTS = window.PRODUCTS || [];
-  const grid = document.getElementById('grid');
-  const q = document.getElementById('q');
-  let filter = 'all';
-
-  const covers = {
-    roi: ['AI Automation ROI', 'Cost-benefit before you invest', '#315C4A'],
-    cash: ['13-Week Cash Flow', 'Liquidity and runway', '#111827'],
-    agency: ['Agency Operating System', 'Packaging · SOPs · Pricing', '#315C4A'],
-    scope: ['Anti-Scope Creep', 'Boundaries that stick', '#B08D3C'],
-    ledger: ['The Freedom Ledger', 'Debt payoff tracker', '#111827'],
-    saas: ['Micro-SaaS Blueprint', 'Idea to small revenue', '#315C4A']
-  };
-
+  var PRODUCTS = window.PRODUCTS || [];
+  var grid = document.getElementById('grid');
+  var q = document.getElementById('q');
+  var filter = 'all';
+  var covers = {roi:['AI Automation ROI','Cost-benefit before you invest','#315C4A'],cash:['13-Week Cash Flow','Liquidity and runway','#111827'],agency:['Agency Operating System','Packaging · SOPs · Pricing','#315C4A'],scope:['Anti-Scope Creep','Boundaries that stick','#B08D3C'],ledger:['The Freedom Ledger','Debt payoff tracker','#111827'],saas:['Micro-SaaS Blueprint','Idea to small revenue','#315C4A']};
   function esc(s){ return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/"/g,'"'); }
-
   function mediaHtml(p){
-    if (p.img) {
-      return '<img src="'+esc(p.img)+'" alt="'+esc(p.name)+'" loading="lazy" width="400" height="400" />';
-    }
+    if (p.img) return '<img src="'+esc(p.img)+'" alt="'+esc(p.name)+'" loading="lazy" width="400" height="400" />';
     if (p.cover && covers[p.cover]) {
-      const [t,s,a] = covers[p.cover];
+      var t=covers[p.cover][0], s=covers[p.cover][1], a=covers[p.cover][2];
       return '<div class="ph" style="border-left:6px solid '+a+'"><div style="font-size:11px;letter-spacing:.12em;color:#B08D3C;font-weight:700;margin-bottom:16px">IZO</div><div style="font-family:Georgia,serif;font-size:18px;color:#111827;line-height:1.3;margin-bottom:8px">'+esc(t)+'</div><div style="font-size:13px;color:#5c5c5c">'+esc(s)+'</div><div style="margin-top:auto;padding-top:28px;font-size:11px;color:#8a857c">'+esc(p.type)+' · Payhip</div></div>';
     }
     return '<div class="ph" style="place-items:center;display:grid;text-align:center">'+esc(p.type||'Digital')+' · '+esc(p.platform)+'</div>';
   }
-
   function card(p){
-    return '<article class="card" role="listitem" data-cat="'+esc(p.cat)+'" data-plat="'+esc(p.platform)+'">'+'
-      <div class="card-media">'+mediaHtml(p)+'<span class="badge">'+esc(p.platform)+'</span></div>'+'
-      <div class="card-body">'+'
-        <h3>'+esc(p.name)+'</h3>'+'
-        <p class="vp">'+esc(p.vp)+'</p>'+'
-        <div class="card-meta"><span class="price">'+esc(p.price)+'</span><span class="platform">'+esc(p.type||'')+'</span></div>'+'
-        <a class="cta" href="'+esc(p.url)+'" target="_blank" rel="noopener">View Product</a>'+'
-      </div></article>';
+    return '<article class="card" role="listitem"><div class="card-media">'+mediaHtml(p)+'<span class="badge">'+esc(p.platform)+'</span></div><div class="card-body"><h3>'+esc(p.name)+'</h3><p class="vp">'+esc(p.vp)+'</p><div class="card-meta"><span class="price">'+esc(p.price)+'</span><span class="platform">'+esc(p.type||'')+'</span></div><a class="cta" href="'+esc(p.url)+'" target="_blank" rel="noopener">View Product</a></div></article>';
   }
-
   function render(){
-    const term = (q.value||'').toLowerCase().trim();
-    const list = PRODUCTS.filter(function(p){
+    var term = (q.value||'').toLowerCase().trim();
+    var list = PRODUCTS.filter(function(p){
       if (filter !== 'all' && p.cat !== filter && p.platform !== filter) return false;
-      if (term && !(p.name||'').toLowerCase().includes(term) && !(p.vp||'').toLowerCase().includes(term) && !(p.platform||'').toLowerCase().includes(term) && !(p.type||'').toLowerCase().includes(term)) return false;
+      if (term && !(p.name||'').toLowerCase().includes(term) && !(p.vp||'').toLowerCase().includes(term) && !(p.platform||'').toLowerCase().includes(term)) return false;
       return true;
     });
-    grid.innerHTML = list.length ? list.map(card).join('') : '<p class="empty-msg">No products match. Try another filter or email maanizozo9@gmail.com.</p>';
+    grid.innerHTML = list.length ? list.map(card).join('') : '<p class="empty-msg">No products match. Email maanizozo9@gmail.com</p>';
   }
-
   document.getElementById('filters').addEventListener('click', function(e){
-    const b = e.target.closest('.chip');
-    if (!b) return;
+    var b = e.target.closest('.chip'); if (!b) return;
     document.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('active'); });
-    b.classList.add('active');
-    filter = b.dataset.f;
-    render();
+    b.classList.add('active'); filter = b.dataset.f; render();
   });
   q.addEventListener('input', render);
   render();
-
-  window.addEventListener('scroll', function(){
-    document.getElementById('hdr').classList.toggle('scrolled', window.scrollY > 12);
-  }, {passive:true});
-
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if (e.isIntersecting) e.target.classList.add('in'); });
-  }, {threshold:0.12});
+  window.addEventListener('scroll', function(){ document.getElementById('hdr').classList.toggle('scrolled', window.scrollY > 12); }, {passive:true});
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) e.target.classList.add('in'); }); }, {threshold:0.1});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-
-  var panel = document.getElementById('chat-panel');
-  var body = document.getElementById('chat-b');
-  var input = document.getElementById('chat-in');
+  setTimeout(function(){ document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }, 600);
+  var panel = document.getElementById('chat-panel'), body = document.getElementById('chat-b'), input = document.getElementById('chat-in');
   document.getElementById('chat-btn').onclick = function(){ panel.classList.toggle('open'); };
   document.getElementById('chat-x').onclick = function(){ panel.classList.remove('open'); };
-
   function findBy(keys){
     return PRODUCTS.filter(function(p){
-      var hay = ((p.name||'')+' '+(p.vp||'')+' '+(p.cat||'')+' '+(p.type||'')+' '+(p.platform||'')).toLowerCase();
+      var hay = ((p.name||'')+' '+(p.vp||'')+' '+(p.cat||'')+' '+(p.type||'')).toLowerCase();
       return keys.some(function(k){ return hay.indexOf(k) !== -1; });
     });
   }
-
-  function listLines(items){
-    return items.slice(0,6).map(function(p){ return '• '+p.name+' ('+p.price+', '+p.platform+')'; }).join('\n');
-  }
-
+  function listLines(items){ return items.slice(0,6).map(function(p){ return '• '+p.name+' ('+p.price+', '+p.platform+')'; }).join('\n'); }
   function answer(t){
     var s = t.toLowerCase();
-    if (/invoice|crm|client|overdue|follow-?up/.test(s)) {
-      var items = findBy(['crm','invoice','client']);
-      return items.length ? 'For clients and invoices:\n'+listLines(items)+'\nThese are tracking templates — not accounting software.' : 'Email maanizozo9@gmail.com for product advice.';
-    }
-    if (/adhd|planner|morning|study|focus|exam|routine|gentle reset|clear start/.test(s)) {
-      var items = findBy(['adhd','planner','study','morning','gentle']);
-      return items.length ? 'ADHD & study tools on this site:\n'+listLines(items)+'\nOrganizational aids only — not medical advice.' : 'Email maanizozo9@gmail.com';
-    }
-    if (/signal|checklist|offer|demand|valid|outreach|packag/.test(s)) {
-      var items = findBy(['offer','signal','checklist','outreach','scope']);
-      return items.length ? 'Offer and validation tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com';
-    }
-    if (/scope|proposal|creep|boundary/.test(s)) {
-      var items = findBy(['scope','proposal','creep']);
-      return items.length ? 'Scope and proposal tools:\n'+listLines(items)+'\nTemplates only — not legal advice.' : 'Email maanizozo9@gmail.com';
-    }
-    if (/finance|cash|profit|expense|debt|ledger|money/.test(s)) {
-      var items = findBy(['finance','cash','debt','ledger','profit']);
-      return items.length ? 'Finance-related tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com';
-    }
-    if (/nextstep|deal|b2b|sales/.test(s)) {
-      var items = findBy(['nextstep','b2b','deal']);
-      return items.length ? 'B2B tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com';
-    }
-    if (/productivity|business pack|planning|goals/.test(s)) {
-      var items = findBy(['productivity','planning','goals']);
-      return items.length ? 'Productivity tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com';
-    }
-    if (/deliver|download|access|receive|checkout|how do i get/.test(s)) {
-      return 'After checkout on Shopify, Whop or Payhip you get instant digital access or download from that platform. Keep the order email. Missing files: email maanizozo9@gmail.com with order ID and platform.';
-    }
-    if (/mac|google sheets|excel|compatible|edit|format/.test(s)) {
-      return 'Excel products need Microsoft Excel or a compatible app (many work on Mac with Excel). Printables are typically PDF. Always check the product page for format. Human support: maanizozo9@gmail.com';
-    }
-    if (/refund|support|human|help me|email/.test(s)) {
-      return 'For human support, email maanizozo9@gmail.com with the product name, platform, and order reference if you have one.';
-    }
-    if (/payhip|shopify|whop|platform|difference/.test(s)) {
-      return 'Shopify hosts Excel/printable store products. Whop hosts marketplace kits and services. Payhip hosts PDF frameworks. Same IZO studio; checkout happens on the platform shown on each card.';
-    }
-    return 'I only answer from the products listed on this site. For that question, please email maanizozo9@gmail.com.';
+    if (/invoice|crm|client|overdue/.test(s)) { var items=findBy(['crm','invoice','client']); return items.length ? 'For clients and invoices:\n'+listLines(items) : 'Email maanizozo9@gmail.com'; }
+    if (/adhd|planner|morning|study|exam|routine/.test(s)) { var items=findBy(['adhd','planner','study','morning','gentle']); return items.length ? 'ADHD & study tools:\n'+listLines(items)+'\nOrganizational aids only — not medical advice.' : 'Email maanizozo9@gmail.com'; }
+    if (/offer|signal|checklist|demand|valid/.test(s)) { var items=findBy(['offer','signal','checklist']); return items.length ? 'Offer tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com'; }
+    if (/scope|proposal|creep/.test(s)) { var items=findBy(['scope','proposal','creep']); return items.length ? 'Scope tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com'; }
+    if (/finance|cash|debt|ledger|profit/.test(s)) { var items=findBy(['finance','cash','debt','ledger','profit']); return items.length ? 'Finance tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com'; }
+    if (/deliver|download|access|checkout/.test(s)) return 'After checkout on Shopify, Whop or Payhip you get instant digital access. Keep the order email. Issues: maanizozo9@gmail.com';
+    if (/support|human|email|help me|refund/.test(s)) return 'Email maanizozo9@gmail.com with product name, platform, and order ID if you have one.';
+    return 'I only answer from products on this site. Please email maanizozo9@gmail.com.';
   }
-
   function sendMsg(text){
     if (!text || !text.trim()) return;
-    var u = document.createElement('div');
-    u.className = 'msg user';
-    u.textContent = text;
-    body.appendChild(u);
-    setTimeout(function(){
-      var b = document.createElement('div');
-      b.className = 'msg bot';
-      b.style.whiteSpace = 'pre-wrap';
-      b.textContent = answer(text);
-      body.appendChild(b);
-      body.scrollTop = body.scrollHeight;
-    }, 280);
-    body.scrollTop = body.scrollHeight;
+    var u=document.createElement('div'); u.className='msg user'; u.textContent=text; body.appendChild(u);
+    setTimeout(function(){ var b=document.createElement('div'); b.className='msg bot'; b.style.whiteSpace='pre-wrap'; b.textContent=answer(text); body.appendChild(b); body.scrollTop=body.scrollHeight; }, 250);
   }
-
-  document.getElementById('chat-go').onclick = function(){ sendMsg(input.value); input.value = ''; };
-  input.addEventListener('keydown', function(e){ if (e.key === 'Enter') { sendMsg(input.value); input.value = ''; } });
-  document.querySelectorAll('.chat-q button').forEach(function(btn){
-    btn.onclick = function(){ sendMsg(btn.dataset.q); };
-  });
+  document.getElementById('chat-go').onclick=function(){ sendMsg(input.value); input.value=''; };
+  input.addEventListener('keydown', function(e){ if (e.key==='Enter'){ sendMsg(input.value); input.value=''; } });
+  document.querySelectorAll('.chat-q button').forEach(function(btn){ btn.onclick=function(){ sendMsg(btn.dataset.q); }; });
 })();
 </script>
 </body>
