@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>IZO-KING — Practical tools that sell clarity</title>
-<meta name="description" content="Low-ticket digital systems for freelancers and small businesses: demand testing, client offers, and productivity tools. Instant delivery on Whop." />
-<meta property="og:title" content="IZO-KING — Practical tools that sell clarity" />
-<meta property="og:description" content="Test demand in 7 days. Package your service. Clear systems — no hype." />
+<title>IZO-KING — Test demand before you build the wrong offer</title>
+<meta name="description" content="Practical systems for freelancers and small businesses: validate demand in 7 days, package your service clearly, and stop unpaid scope creep. Instant delivery on Whop." />
+<meta property="og:title" content="IZO-KING — Test demand before you build the wrong offer" />
+<meta property="og:description" content="Most offers fail because demand was assumed. Fix that in 7 days — or package your service so clients can say yes." />
 <style>
 :root{--navy:#0b1220;--navy2:#121c2e;--gold:#d4a017;--gold2:#f0c14b;--cream:#f7f4ee;--muted:#9aa6b2;--card:#151f33;--line:rgba(212,160,23,.25)}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -18,19 +18,21 @@ header{display:flex;align-items:center;justify-content:space-between;padding:22p
 .logo-mark{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--gold2),var(--gold) 55%,#8a6a00);display:grid;place-items:center;color:#0b1220;font-size:12px;font-weight:900}
 nav a{color:var(--muted);margin-left:18px;font-size:14px}
 nav a:hover{color:var(--gold2)}
-.hero{padding:64px 0 40px;display:grid;gap:28px}
+.hero{padding:64px 0 40px;display:grid;gap:22px}
 .badge{display:inline-block;border:1px solid var(--line);color:var(--gold2);padding:6px 12px;border-radius:999px;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
-h1{font-size:clamp(28px,5vw,48px);line-height:1.15;max-width:16ch}
+h1{font-size:clamp(28px,5vw,46px);line-height:1.15;max-width:18ch}
 h1 span{color:var(--gold2)}
-.lead{color:var(--muted);max-width:52ch;font-size:18px}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.lead{color:var(--muted);max-width:54ch;font-size:18px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:10px;font-weight:700;font-size:15px;transition:.15s ease}
 .btn-primary{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#111;box-shadow:0 8px 24px rgba(212,160,23,.25)}
 .btn-primary:hover{transform:translateY(-1px)}
 .btn-ghost{border:1px solid var(--line);color:var(--cream)}
 .btn-ghost:hover{border-color:var(--gold)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;padding:20px 0 60px}
-.card{background:linear-gradient(180deg,var(--card),var(--navy2));border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px;min-height:280px}
+.card{background:linear-gradient(180deg,var(--card),var(--navy2));border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px;min-height:300px}
+.card.featured{border-color:rgba(240,193,75,.55);box-shadow:0 0 0 1px rgba(240,193,75,.15)}
+.tag{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2);font-weight:700}
 .price{font-size:28px;font-weight:800;color:var(--gold2)}
 .price small{font-size:13px;color:var(--muted);font-weight:500}
 .card h3{font-size:20px}
@@ -39,12 +41,13 @@ h1 span{color:var(--gold2)}
 .card ul li::before{content:"✓ ";color:var(--gold)}
 .section{padding:10px 0 50px}
 .section h2{font-size:24px;margin-bottom:10px}
-.section p{color:var(--muted);max-width:60ch}
+.section p{color:var(--muted);max-width:62ch}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:18px}
 .step{border:1px solid var(--line);border-radius:12px;padding:16px;background:rgba(255,255,255,.02)}
 .step strong{color:var(--gold2);display:block;margin-bottom:6px}
 footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
 .note{font-size:12px;color:#7f8b98;margin-top:8px}
+.pain{color:#c9d2dc;font-size:15px;max-width:56ch;border-left:3px solid var(--gold);padding-left:14px}
 </style>
 </head>
 <body>
@@ -52,79 +55,91 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 <header>
   <div class="logo"><div class="logo-mark">IZO</div><span>IZO-KING</span></div>
   <nav>
-    <a href="#products">Products</a>
+    <a href="#products">Tools</a>
     <a href="#how">How it works</a>
-    <a href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Best seller</a>
+    <a href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Start for $7</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="badge">Practical systems · Instant digital delivery</div>
-  <h1>Stop guessing. <span>Validate, package, sell</span> with clear tools.</h1>
-  <p class="lead">Built for freelancers, consultants, and small teams who need operational clarity — not hype. Low-ticket entry points, instant access on Whop.</p>
+  <div class="badge">Instant access on Whop · No monthly lock-in on starter tools</div>
+  <h1>Most offers fail for one quiet reason: <span>demand was assumed</span>.</h1>
+  <p class="pain">You spent weeks building. Then silence. The fix is not more motivation — it is a small daily test that tells you keep, narrow, or pause before you waste another month.</p>
+  <p class="lead">IZO-KING tools are short, practical systems for freelancers and small businesses: validate demand, package a service clients understand, and move with evidence — not hope.</p>
   <div class="cta-row">
-    <a class="btn btn-primary" href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Start with Offer Signal Lab — $7</a>
-    <a class="btn btn-ghost" href="#products">See all tools</a>
+    <a class="btn btn-primary" href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Validate your offer in 7 days — $7</a>
+    <a class="btn btn-ghost" href="#products">Compare the three tools</a>
   </div>
-  <p class="note">Educational products only. No income results are guaranteed.</p>
+  <p class="note">Educational systems only. Results depend on your market and execution. No income is guaranteed.</p>
 </section>
 
 <section id="products" class="section">
-  <h2>Choose your next step</h2>
-  <p>Three low-friction tools. Pick the problem you have today.</p>
+  <h2>Pick the problem you have this week</h2>
+  <p>One clear job per tool. One-time price. Instant digital delivery after checkout on Whop.</p>
   <div class="grid">
     <article class="card">
+      <div class="tag">Best if you need structure today</div>
       <div class="price">$5 <small>one-time</small></div>
       <h3>7-Day Offer Test Checklist</h3>
-      <p>One small market test per day. Log interest, objections, and silence. Decide keep / narrow / pause with evidence.</p>
+      <p><strong style="color:#e8eef5">Problem:</strong> You keep “thinking about launching” without a simple daily action.</p>
+      <p>One small market test per day. Log interest, objections, and silence. End the week with a decision: keep, narrow, reposition, or pause.</p>
       <ul>
-        <li>Daily test structure</li>
-        <li>Signal log</li>
-        <li>Decision box at day 7</li>
+        <li>Day-by-day test prompts</li>
+        <li>Signal log (interest / objection / silence)</li>
+        <li>Decision box on day 7</li>
       </ul>
-      <a class="btn btn-primary" href="https://whop.com/checkout/plan_ZDX9AyVWu3q7F">Get the checklist</a>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_ZDX9AyVWu3q7F">Get the checklist — $5</a>
     </article>
 
-    <article class="card">
+    <article class="card featured">
+      <div class="tag">Most popular starter</div>
       <div class="price">$7 <small>one-time</small></div>
       <h3>Offer Signal Lab</h3>
-      <p>A 7-day demand-validation sprint before you build the wrong launch. Practical playbook delivered inside Whop.</p>
+      <p><strong style="color:#e8eef5">Problem:</strong> You are building a full offer before you know if anyone wants it.</p>
+      <p>A complete 7-day demand-validation sprint. Run one test a day, record real market signals, then decide with evidence — before the expensive launch.</p>
       <ul>
-        <li>Daily market tests</li>
-        <li>Signal recording</li>
-        <li>Keep / reposition / pause</li>
+        <li>Full 7-day validation playbook</li>
+        <li>What counts as a real signal</li>
+        <li>Clear keep / reposition / pause rules</li>
       </ul>
-      <a class="btn btn-primary" href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Get Offer Signal Lab</a>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Start Offer Signal Lab — $7</a>
     </article>
 
     <article class="card">
+      <div class="tag">Best if clients already ask</div>
       <div class="price">$9 <small>one-time</small></div>
       <h3>Client Offer Engine</h3>
-      <p>Turn one service into a clear offer and a 7-day outreach plan — worksheets, offer page structure, objection library.</p>
+      <p><strong style="color:#e8eef5">Problem:</strong> You have a skill — but no clear offer, price, or outreach plan.</p>
+      <p>Turn one service into a buyable offer: ideal buyer, deliverable, price structure, one-page offer, objection responses, and a 7-day outreach board.</p>
       <ul>
-        <li>Offer clarity map</li>
-        <li>Pricing structure</li>
-        <li>7-day outreach board</li>
+        <li>Offer clarity + packaging worksheets</li>
+        <li>Transparent price structure</li>
+        <li>7-day outreach + objection library</li>
       </ul>
-      <a class="btn btn-primary" href="https://whop.com/checkout/plan_cPp7C1NvoDc4S">Get Client Offer Engine</a>
+      <a class="btn btn-primary" href="https://whop.com/checkout/plan_cPp7C1NvoDc4S">Build your offer — $9</a>
     </article>
   </div>
 </section>
 
 <section id="how" class="section">
-  <h2>How it works</h2>
+  <h2>From click to clarity in three steps</h2>
   <div class="steps">
-    <div class="step"><strong>1. Pick the tool</strong>Choose the product that matches your current bottleneck.</div>
-    <div class="step"><strong>2. Checkout on Whop</strong>Secure payment. Instant digital access after purchase.</div>
-    <div class="step"><strong>3. Apply the system</strong>Follow the checklist or playbook. Measure real signals.</div>
+    <div class="step"><strong>1. Choose the bottleneck</strong>No demand data yet? Start with validation. Already talking to clients? Use Client Offer Engine.</div>
+    <div class="step"><strong>2. Checkout once on Whop</strong>Secure payment. Instant access. No forced subscription on these starter tools.</div>
+    <div class="step"><strong>3. Run the system this week</strong>Follow the daily steps. Write what the market actually said — then decide.</div>
   </div>
 </section>
 
+<section class="section">
+  <h2>Who this is for</h2>
+  <p>Freelancers, consultants, creators, and small operators who want a clear next action — not another long course. If you need a full done-for-you agency, this is not that. If you need a practical system you can finish in days, start here.</p>
+</section>
+
 <footer>
-  <div>© IZO-KING / ISMAIL GROUP · Practical digital tools</div>
+  <div>© IZO-KING / ISMAIL GROUP · Practical digital tools<br><span style="font-size:11px">No income claims. Execution and market conditions determine outcomes.</span></div>
   <div>
     <a href="https://x.com/ISMAILGROUPAI">X</a> ·
-    <a href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Whop</a>
+    <a href="https://whop.com/checkout/plan_f8gZhGMZRU5Kn">Buy on Whop</a>
   </div>
 </footer>
 </div>
