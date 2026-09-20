@@ -1,6 +1,6 @@
 /**
  * Daily insight generator for IZO-KING
- * Set env: XAI_API_KEY (preferred) or OPENAI_API_KEY
+ * Prefers OPENAI_API_KEY, falls back to XAI_API_KEY
  * Optional: CRON_SECRET, GITHUB_TOKEN (to auto-commit blog posts)
  *
  * GET /api/daily-insight
@@ -103,7 +103,7 @@ function renderHtml(article) {
   const date = new Date().toISOString().slice(0, 10);
   const body = String(article.body || "")
     .split(/\n\n+/)
-    .map((p) => "<p>" + p.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/</g, "&lt;").replace(/&lt;strong>/g, "<strong>").replace(/&lt;\/strong>/g, "</strong>") + "</p>")
+    .map((p) => "<p>" + p.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/</g, "<").replace(/<strong>/g, "<strong>").replace(/<\/strong>/g, "</strong>") + "</p>")
     .join("\n");
   return {
     id,
@@ -113,7 +113,7 @@ function renderHtml(article) {
 <head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>${article.title} — IZO-KING</title>
-<meta name="description" content="${(article.excerpt || "").replace(/"/g, "&quot;")}"/>
+<meta name="description" content="${(article.excerpt || "").replace(/"/g, """)}"/>
 <link rel="canonical" href="https://izo-king-studio.vercel.app/blog/${id}.html"/>
 <link rel="icon" href="/1-3-1000061052.jpg"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -182,17 +182,17 @@ export default async function handler(req) {
       }
     }
 
-    const xai = process.env.XAI_API_KEY;
-    const oai = process.env.OPENAI_API_KEY;
-    if (!xai && !oai) {
+    const oai = (process.env.OPENAI_API_KEY || "").trim();
+    const xai = (process.env.XAI_API_KEY || "").trim();
+    if (!oai && !xai) {
       return json(503, {
         error: "Missing API key",
-        hint: "Add XAI_API_KEY or OPENAI_API_KEY in Vercel project environment variables",
+        hint: "Add OPENAI_API_KEY or XAI_API_KEY in Vercel project environment variables",
       });
     }
 
     const topic = TOPICS[new Date().getUTCDay() % TOPICS.length];
-    const article = xai ? await callXai(xai, topic) : await callOpenAI(oai, topic);
+    const article = oai ? await callOpenAI(oai, topic) : await callXai(xai, topic);
     if (!article.title || !article.body) {
       return json(500, { error: "Incomplete article from model", article });
     }
@@ -210,6 +210,7 @@ export default async function handler(req) {
 
     return json(200, {
       ok: true,
+      provider: oai ? "openai" : "xai",
       topic,
       article: {
         title: article.title,
