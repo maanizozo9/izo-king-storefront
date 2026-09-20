@@ -6,10 +6,7 @@
     <meta name="google-site-verification" content="4nvsRVOKGdhgItYuD_zfRUoXWm3zK8gvaqhfFjJDUr0" />
     <meta name="theme-color" content="#0B1622" />
     <title>IZO-KING — Useful Digital Tools, Made for Real Life</title>
-    <meta
-      name="description"
-      content="IZO-KING builds premium digital tools and practical systems for freelancers, creators, students and small businesses. Excel templates, ADHD-friendly planners, finance dashboards, offer playbooks and B2B decision systems. 100% digital delivery."
-    />
+    <meta name="description" content="IZO-KING builds premium digital tools and practical systems for freelancers, creators, students and small businesses. Excel templates, ADHD-friendly planners, finance dashboards, offer playbooks and B2B decision systems. 100% digital delivery." />
     <meta name="keywords" content="IZO-KING, digital products, Excel templates, ADHD planner, freelancer CRM, small business finance tracker, offer validation, B2B sales tools, digital downloads" />
     <meta name="author" content="IZO-KING" />
     <link rel="canonical" href="https://izo-king-storefront-ismails-projects-325f8bd4.vercel.app/" />
@@ -27,10 +24,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-CR7N8w7h.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BsWtnWcg.css" />
+    <script type="module" crossorigin src="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/assets/index-CR7N8w7h.js"></script>
+    <link rel="stylesheet" crossorigin href="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/assets/index-BsWtnWcg.css" />
   </head>
   <body>
     <div id="root"></div>
+    <script id="social-fix">
+(function(){
+  var map = {
+    "twitter.com/Ma3aniZ": "https://x.com/ISMAILGROUPAI",
+    "x.com/Ma3aniZ": "https://x.com/ISMAILGROUPAI",
+    "tiktok.com/@digetalproducts": "https://www.tiktok.com/@izoking_shop",
+    "instagram.com/digital_prodacte": "https://www.instagram.com/izo_king_studio",
+    "pin.it/3OMTQWK2v": "https://www.linkedin.com/in/Izo-king-studio"
+  };
+  function fix(){
+    document.querySelectorAll("a[href]").forEach(function(a){
+      var h = a.getAttribute("href") || "";
+      Object.keys(map).forEach(function(k){
+        if (h.indexOf(k) !== -1) {
+          a.setAttribute("href", map[k]);
+          if (k.indexOf("pin.it") !== -1) {
+            var t = a.textContent || "";
+            if (/pinterest/i.test(t)) a.textContent = t.replace(/Pinterest/i, "LinkedIn");
+          }
+        }
+      });
+    });
+  }
+  fix();
+  setInterval(fix, 1200);
+  if (window.MutationObserver) {
+    var obs = new MutationObserver(fix);
+    obs.observe(document.documentElement, {childList:true, subtree:true});
+  }
+})();
+    </script>
   </body>
 </html>
