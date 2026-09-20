@@ -7,33 +7,35 @@
     <meta name="theme-color" content="#0B1622" />
     <title>IZO-KING — Useful Digital Tools, Made for Real Life</title>
     <meta name="description" content="IZO-KING builds premium digital tools and practical systems for freelancers, creators, students and small businesses. Excel templates, ADHD-friendly planners, finance dashboards, offer playbooks and B2B decision systems. 100% digital delivery." />
-    <meta name="keywords" content="IZO-KING, digital products, Excel templates, ADHD planner, freelancer CRM, small business finance tracker, offer validation, B2B sales tools, digital downloads" />
     <meta name="author" content="IZO-KING" />
-    <link rel="canonical" href="https://izo-king-storefront-ismails-projects-325f8bd4.vercel.app/" />
+    <link rel="canonical" href="https://izo-king-studio.vercel.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="IZO-KING" />
     <meta property="og:title" content="IZO-KING — Useful Digital Tools, Made for Real Life" />
     <meta property="og:description" content="Focused systems for work, study, business and growth. Premium digital tools for freelancers, creators, students and small businesses." />
+    <meta property="og:url" content="https://izo-king-studio.vercel.app/" />
     <meta property="og:image" content="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/hero-studio.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="IZO-KING — Useful Digital Tools, Made for Real Life" />
-    <meta name="twitter:description" content="Focused systems for work, study, business and growth. 100% digital delivery." />
     <meta name="twitter:image" content="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/hero-studio.jpg" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="dns-prefetch" href="https://dnp64f-745wi6899-arcadawebapps2.vercel.app" />
+    <link rel="preconnect" href="https://dnp64f-745wi6899-arcadawebapps2.vercel.app" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/assets/index-BsWtnWcg.css" />
+    <link rel="preload" as="script" href="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/assets/index-CR7N8w7h.js" crossorigin />
+    <link rel="preload" as="image" href="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/hero-studio.jpg" fetchpriority="high" />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/assets/index-CR7N8w7h.js"></script>
     <link rel="stylesheet" crossorigin href="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/assets/index-BsWtnWcg.css" />
+    <script type="module" crossorigin src="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/assets/index-CR7N8w7h.js"></script>
   </head>
   <body>
     <div id="root"></div>
-    <script id="social-fix">
+    <script>
 (function(){
   var map = {
     "twitter.com/Ma3aniZ": "https://x.com/ISMAILGROUPAI",
-    "x.com/Ma3aniZ": "https://x.com/ISMAILGROUPAI",
     "tiktok.com/@digetalproducts": "https://www.tiktok.com/@izoking_shop",
     "instagram.com/digital_prodacte": "https://www.instagram.com/izo_king_studio",
     "pin.it/3OMTQWK2v": "https://www.linkedin.com/in/Izo-king-studio"
@@ -41,23 +43,20 @@
   function fix(){
     document.querySelectorAll("a[href]").forEach(function(a){
       var h = a.getAttribute("href") || "";
-      Object.keys(map).forEach(function(k){
+      for (var k in map) {
         if (h.indexOf(k) !== -1) {
           a.setAttribute("href", map[k]);
-          if (k.indexOf("pin.it") !== -1) {
-            var t = a.textContent || "";
-            if (/pinterest/i.test(t)) a.textContent = t.replace(/Pinterest/i, "LinkedIn");
-          }
+          if (k.indexOf("pin.it") !== -1 && /pinterest/i.test(a.textContent||""))
+            a.textContent = (a.textContent||"").replace(/Pinterest/i, "LinkedIn");
         }
-      });
+      }
     });
   }
-  fix();
-  setInterval(fix, 1200);
-  if (window.MutationObserver) {
-    var obs = new MutationObserver(fix);
-    obs.observe(document.documentElement, {childList:true, subtree:true});
-  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fix);
+  else fix();
+  var n = 0;
+  var t = setInterval(function(){ fix(); if (++n > 8) clearInterval(t); }, 800);
+  if (window.MutationObserver) new MutationObserver(fix).observe(document.documentElement,{childList:true,subtree:true});
 })();
     </script>
   </body>
