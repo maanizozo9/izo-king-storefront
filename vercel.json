@@ -1,4 +1,10 @@
 {
+  "crons": [
+    {
+      "path": "/api/daily-insight",
+      "schedule": "0 8 * * *"
+    }
+  ],
   "rewrites": [
     { "source": "/brand/izo-king-logo.jpg", "destination": "/1-3-1000061052.jpg" },
     { "source": "/brand/izo-king-store-banner.jpg", "destination": "/cta-band.jpg" },
@@ -9,6 +15,6 @@
     { "source": "/media/:file*", "destination": "/:file*" },
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/blog/", "destination": "/blog/index.html" },
-    { "source": "/((?!index-|whop-|cta-|favicon|robots|sitemap|api/|1-3-|brand/|blog/|izo-|products\\.js).*)", "destination": "/index.html" }
+    { "source": "/((?!api/|index-|whop-|cta-|favicon|robots|sitemap|1-3-|brand/|blog/|izo-|products\\.js).*)", "destination": "/index.html" }
   ]
 }
