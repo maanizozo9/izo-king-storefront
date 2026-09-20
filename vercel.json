@@ -2,16 +2,14 @@
   "rewrites": [
     { "source": "/assets/index-BsWtnWcg.css", "destination": "/index-BsWtnWcg.css" },
     { "source": "/assets/index-CR7N8w7h.js", "destination": "/index-CR7N8w7h.js" },
+    { "source": "/media/hero-studio.jpg", "destination": "https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/hero-studio.jpg" },
+    { "source": "/media/about-desk.jpg", "destination": "https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/about-desk.jpg" },
     { "source": "/media/:file*", "destination": "/:file*" },
-    { "source": "/((?!assets/|media/|favicon.svg|robots.txt|sitemap.xml|index-|whop-|cta-|api/).*)", "destination": "/index.html" }
+    { "source": "/((?!index-|whop-|cta-|favicon|robots|sitemap|api/|.*\\.(css|js|jpg|jpeg|png|svg|webp)).*)", "destination": "/index.html" }
   ],
   "headers": [
     {
       "source": "/(index-.*\\.(css|js))",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
-    },
-    {
-      "source": "/(.*\\.(jpg|jpeg|png|webp|svg))",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
     }
   ]
