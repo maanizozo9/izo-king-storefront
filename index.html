@@ -30,5 +30,32 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+(function(){
+  var map = {
+    "twitter.com/Ma3aniZ": "https://x.com/ISMAILGROUPAI",
+    "tiktok.com/@digetalproducts": "https://www.tiktok.com/@izoking_shop",
+    "instagram.com/digital_prodacte": "https://www.instagram.com/izo_king_studio",
+    "pin.it/3OMTQWK2v": "https://www.linkedin.com/in/Izo-king-studio"
+  };
+  function fix(){
+    document.querySelectorAll("a[href]").forEach(function(a){
+      var h = a.getAttribute("href") || "";
+      for (var k in map) {
+        if (h.indexOf(k) !== -1) {
+          a.setAttribute("href", map[k]);
+          if (k.indexOf("pin.it") !== -1 && /pinterest/i.test(a.textContent||""))
+            a.textContent = (a.textContent||"").replace(/Pinterest/i, "LinkedIn");
+        }
+      }
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fix);
+  else fix();
+  var n = 0;
+  var t = setInterval(function(){ fix(); if (++n > 10) clearInterval(t); }, 700);
+  if (window.MutationObserver) new MutationObserver(fix).observe(document.documentElement,{childList:true,subtree:true});
+})();
+    </script>
   </body>
 </html>
