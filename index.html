@@ -1,294 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>IZO — Useful digital tools for freelancers, students & small businesses</title>
-<meta name="description" content="Focused templates and systems for freelancers, students, creators and small businesses. Excel trackers, ADHD planners, offer kits and practical guides from Shopify, Whop and Payhip." />
-<meta name="robots" content="index,follow" />
-<link rel="canonical" href="https://izo-king-storefront-ismails-projects-325f8bd4.vercel.app/" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="IZO — Useful digital tools, made for real life" />
-<meta property="og:description" content="Focused templates and systems for freelancers, students, creators and small businesses." />
-<meta property="og:url" content="https://izo-king-storefront-ismails-projects-325f8bd4.vercel.app/" />
-<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0825/2093/2576/files/rn-image_picker_lib_temp_97604008-5f69-48e1-91d0-076aa9e51009.png?v=1788746838" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="google-site-verification" content="4nvsRVOKGdhgItYuD_zfRUoXWm3zK8gvaqhfFjJDUr0" />
-<meta name="theme-color" content="#111827" />
-<link rel="preconnect" href="https://cdn.shopify.com" crossorigin />
-<link rel="preconnect" href="https://assets-2-prod.whop.com" crossorigin />
-<style>
-:root{--navy:#111827;--ivory:#FAF9F6;--beige:#F1EDE5;--gold:#B08D3C;--forest:#315C4A;--charcoal:#252525;--white:#FFFFFF;--muted:#5c5c5c;--line:rgba(17,24,39,.09);--shadow:0 14px 40px rgba(17,24,39,.08);--radius:16px}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:Segoe UI,system-ui,-apple-system,sans-serif;background:var(--ivory);color:var(--charcoal);line-height:1.55;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.site-header{position:sticky;top:0;z-index:40;background:rgba(250,249,246,.94);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
-.site-header.scrolled{border-bottom-color:var(--line);box-shadow:0 4px 24px rgba(17,24,39,.05)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--navy)}
-.brand-mark{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:11px;font-weight:800;flex-shrink:0}
-.nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;font-size:14px}
-.nav a{color:var(--muted)}.nav a:hover{color:var(--navy)}
-.nav .btn-sm{background:var(--navy);color:var(--ivory);padding:9px 16px;border-radius:999px;font-size:13px;font-weight:600}
-.search-wrap{position:relative}
-.search-wrap input{border:1px solid var(--line);background:var(--white);border-radius:999px;padding:9px 14px 9px 36px;font-size:13px;width:min(170px,30vw);outline:none}
-.search-wrap::before{content:"⌕";position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
-@media(max-width:760px){.nav a:not(.btn-sm){display:none}.search-wrap input{width:120px}}
-.hero{padding:56px 0 44px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
-@media(max-width:900px){.hero{grid-template-columns:1fr;gap:32px;padding:40px 0 32px}}
-.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
-.hero h1{font-size:clamp(30px,4.5vw,46px);line-height:1.15;color:var(--navy);font-weight:700;letter-spacing:-.025em;margin-bottom:16px;max-width:16ch}
-.hero p.lead{font-size:17px;color:var(--muted);max-width:42ch;margin-bottom:26px}
-.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .2s,background .2s;border:none;cursor:pointer}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--navy);color:var(--ivory)}.btn-secondary{background:var(--beige);color:var(--navy);border:1px solid var(--line)}
-.hero-stage{position:relative;min-height:280px}
-.main-shot{border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden;background:var(--beige)}
-.main-shot img{width:100%;aspect-ratio:1;object-fit:cover}
-.hero-float{position:absolute;right:-6px;bottom:16px;width:40%;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:var(--white)}
-.hero-float img{aspect-ratio:1;object-fit:cover;width:100%}
-.reveal{opacity:1;transform:none}
-@media (prefers-reduced-motion: no-preference){
-  .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
-  .reveal.in{opacity:1;transform:none}
-}
-.section{padding:52px 0}.section.alt{background:var(--beige)}
-.section-head{margin-bottom:28px}
-.section-head h2{font-size:clamp(22px,3vw,30px);color:var(--navy);margin-bottom:8px}
-.section-head p{color:var(--muted);font-size:15px;max-width:48ch}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.chip{font-size:12px;padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--muted);cursor:pointer;font-family:inherit}
-.chip:hover,.chip.active{background:var(--navy);color:var(--ivory);border-color:var(--navy)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
-.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .28s,box-shadow .28s}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.card-media{aspect-ratio:1;background:var(--beige);overflow:hidden;position:relative}
-.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
-.card:hover .card-media img{transform:scale(1.03)}
-.card-media .ph{width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-start;padding:22px;background:linear-gradient(165deg,var(--beige),#e8e2d6)}
-.badge{position:absolute;top:10px;left:10px;font-size:10px;font-weight:700;text-transform:uppercase;background:var(--white);color:var(--navy);padding:5px 9px;border-radius:6px;border:1px solid var(--line);z-index:1}
-.card-body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
-.card-body h3{font-size:14px;line-height:1.4;font-weight:650;color:var(--navy)}
-.card-body .vp{font-size:13px;color:var(--muted);flex:1}
-.card-meta{display:flex;justify-content:space-between;align-items:center}
-.price{font-weight:700;color:var(--navy);font-size:16px}.platform{font-size:11px;color:var(--gold);font-weight:600}
-.cta{margin-top:12px;display:block;text-align:center;background:var(--forest);color:var(--white);padding:11px 12px;border-radius:10px;font-size:13px;font-weight:600}
-.cta:hover{background:#274a3c;color:var(--white)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-@media(max-width:720px){.steps{grid-template-columns:1fr 1fr}}
-.step{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px}
-.step .n{font-size:12px;color:var(--gold);font-weight:700;margin-bottom:8px}
-.step h3{font-size:15px;margin-bottom:6px}.step p{font-size:13px;color:var(--muted)}
-.strip{display:grid;grid-template-columns:1.15fr 1fr;gap:36px;align-items:center}
-@media(max-width:720px){.strip{grid-template-columns:1fr}}
-.strip h2{font-size:26px;margin-bottom:12px;color:var(--navy)}.strip p{color:var(--muted);margin-bottom:10px}.strip a.more{color:var(--forest);font-weight:600}
-footer{background:var(--navy);color:#b8c0cc;padding:52px 0 32px;font-size:13px}footer a{color:#b8c0cc}footer a:hover{color:var(--ivory)}
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:24px;margin-bottom:32px}
-@media(max-width:720px){.foot-grid{grid-template-columns:1fr 1fr}}
-.foot-grid strong{display:block;color:var(--ivory);margin-bottom:12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.foot-grid a{display:block;margin:6px 0}
-.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--ivory);font-weight:700}
-.foot-brand .brand-mark{width:32px;height:32px;font-size:9px}
-#chat-btn{position:fixed;bottom:22px;right:22px;z-index:50;border:none;background:var(--navy);color:var(--ivory);padding:14px 18px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
-#chat-panel{position:fixed;bottom:80px;right:22px;width:min(360px,calc(100vw - 28px));background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:0 20px 50px rgba(17,24,39,.18);z-index:50;display:none;flex-direction:column;overflow:hidden;max-height:72vh}
-#chat-panel.open{display:flex}
-.chat-h{padding:14px 16px;background:var(--beige);border-bottom:1px solid var(--line);font-weight:700;font-size:14px;display:flex;justify-content:space-between}
-.chat-h button{border:none;background:none;font-size:20px;cursor:pointer;color:var(--muted)}
-.chat-b{padding:14px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:8px;min-height:160px;max-height:280px}
-.msg{padding:10px 12px;border-radius:12px;font-size:13px;max-width:92%;line-height:1.45}
-.msg.bot{background:var(--beige);align-self:flex-start}.msg.user{background:var(--navy);color:var(--ivory);align-self:flex-end}
-.chat-q{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 10px}
-.chat-q button{font-size:11px;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--ivory);cursor:pointer;color:var(--muted);font-family:inherit}
-.chat-f{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}
-.chat-f input{flex:1;border:1px solid var(--line);border-radius:10px;padding:11px;font-size:13px;outline:none;font-family:inherit}
-.chat-f button{background:var(--forest);color:#fff;border:none;border-radius:10px;padding:0 16px;font-weight:600;cursor:pointer;font-family:inherit}
-.empty-msg{color:var(--muted);padding:24px 0;grid-column:1/-1}
-noscript .noscript-warn{padding:16px;background:#fff3cd;color:#664d03;text-align:center}
-</style>
-</head>
-<body>
-<noscript><div class="noscript-warn">Please enable JavaScript to browse the product catalog. Contact: maanizozo9@gmail.com</div></noscript>
-<header class="site-header" id="hdr">
-  <div class="wrap header-inner">
-    <a class="brand" href="/" aria-label="IZO home"><span class="brand-mark" aria-hidden="true">IZO</span><span>IZO</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#shop">Shop</a>
-      <a href="#how">How it works</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Help</a>
-      <div class="search-wrap"><input id="q" type="search" placeholder="Search tools" aria-label="Search products" autocomplete="off" /></div>
-      <a class="btn-sm" href="#shop">Explore Products</a>
-    </nav>
-  </div>
-</header>
-<main>
-<section class="hero wrap">
-  <div class="reveal in">
-    <p class="eyebrow">IZO digital studio</p>
-    <h1>Useful digital tools, made for real life.</h1>
-    <p class="lead">Focused templates and systems for freelancers, students, creators and small businesses.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="#shop">Explore Products</a>
-      <a class="btn btn-secondary" href="#shop">Find Your Tool</a>
-    </div>
-  </div>
-  <div class="hero-stage reveal in">
-    <div class="main-shot">
-      <img src="https://cdn.shopify.com/s/files/1/0825/2093/2576/files/rn-image_picker_lib_temp_97604008-5f69-48e1-91d0-076aa9e51009.png?v=1788746838" alt="Freelancer CRM Excel template" width="520" height="520" fetchpriority="high" />
-    </div>
-    <div class="hero-float">
-      <img src="https://cdn.shopify.com/s/files/1/0825/2093/2576/files/rn-image_picker_lib_temp_caffc985-1a22-4682-bf5b-02fd370080df.png?v=1788405495" alt="Clear Start ADHD planner" width="220" height="220" loading="lazy" />
-    </div>
-  </div>
-</section>
-<section class="section" id="shop">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Shop digital tools</h2>
-      <p>Real products from Shopify, Whop and Payhip — each one solves a specific everyday problem.</p>
-    </div>
-    <div class="filters" id="filters" role="group" aria-label="Filter products">
-      <button type="button" class="chip active" data-f="all">All</button>
-      <button type="button" class="chip" data-f="Business">Business</button>
-      <button type="button" class="chip" data-f="ADHD & Study">ADHD & Study</button>
-      <button type="button" class="chip" data-f="Finance">Finance</button>
-      <button type="button" class="chip" data-f="Offers">Offers</button>
-      <button type="button" class="chip" data-f="B2B">B2B</button>
-      <button type="button" class="chip" data-f="Shopify">Shopify</button>
-      <button type="button" class="chip" data-f="Whop">Whop</button>
-      <button type="button" class="chip" data-f="Payhip">Payhip</button>
-    </div>
-    <div class="grid" id="grid" role="list"></div>
-  </div>
-</section>
-<section class="section alt" id="how">
-  <div class="wrap">
-    <div class="section-head"><h2>How it works</h2><p>From browse to download in a few clear steps.</p></div>
-    <div class="steps">
-      <div class="step reveal"><div class="n">01</div><h3>Choose your tool</h3><p>Filter by need or platform.</p></div>
-      <div class="step reveal"><div class="n">02</div><h3>Complete checkout</h3><p>Secure payment on Shopify, Whop or Payhip.</p></div>
-      <div class="step reveal"><div class="n">03</div><h3>Download instantly</h3><p>Access or files right after payment.</p></div>
-      <div class="step reveal"><div class="n">04</div><h3>Start using it</h3><p>Open the file the same day.</p></div>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="wrap strip">
-    <div class="reveal">
-      <h2>About IZO</h2>
-      <p>IZO creates practical digital tools designed to simplify everyday work, organization, study and business.</p>
-      <p><a class="more" href="about.html">Read more →</a></p>
-    </div>
-    <div class="reveal" style="background:var(--beige);border-radius:16px;padding:24px;border:1px solid var(--line)">
-      <p style="font-size:15px;color:var(--muted)">Support: <a href="mailto:maanizozo9@gmail.com" style="color:var(--navy);font-weight:600">maanizozo9@gmail.com</a></p>
-    </div>
-  </div>
-</section>
-</main>
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div><div class="foot-brand"><span class="brand-mark">IZO</span><span>IZO</span></div><p>Practical digital tools for work, study and small business.</p></div>
-      <div><strong>Shop</strong><a href="#shop">All products</a><a href="https://izo-king.myshopify.com/" target="_blank" rel="noopener">Shopify</a><a href="https://payhip.com/IZOKINGSTUDIO" target="_blank" rel="noopener">Payhip</a></div>
-      <div><strong>Social</strong>
-        <a href="https://www.instagram.com/izo_king_studio" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/share/1S9Ka8GxB2/" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.tiktok.com/@izoking_shop" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://www.linkedin.com/in/Izo-king-studio" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://x.com/ISMAILGROUPAI" target="_blank" rel="noopener">X / Twitter</a>
-        <a href="https://share.google/esz5II3WqJy4L4D5k" target="_blank" rel="noopener">Google Maps</a>
-      </div>
-      <div><strong>Help</strong><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="mailto:maanizozo9@gmail.com">Email</a></div>
-      <div><strong>Legal</strong><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-    </div>
-    <p style="opacity:.7">© 2026 IZO / ISMAIL GROUP · maanizozo9@gmail.com</p>
-  </div>
-</footer>
-<button type="button" id="chat-btn" aria-label="Open help">Need help choosing?</button>
-<div id="chat-panel" role="dialog" aria-label="Product help">
-  <div class="chat-h"><span>Need help choosing a product?</span><button type="button" id="chat-x" aria-label="Close">×</button></div>
-  <div class="chat-b" id="chat-b"><div class="msg bot">Hi. Ask which tool fits — invoices, ADHD, offers, finance. Answers use only products on this site. Support: maanizozo9@gmail.com</div></div>
-  <div class="chat-q">
-    <button type="button" data-q="What is best for freelancers tracking invoices?">Invoices</button>
-    <button type="button" data-q="ADHD planner options">ADHD</button>
-    <button type="button" data-q="How do I get my download?">Delivery</button>
-    <button type="button" data-q="Offer validation tools">Offers</button>
-  </div>
-  <div class="chat-f"><input id="chat-in" type="text" placeholder="Ask a question…" maxlength="400" /><button type="button" id="chat-go">Send</button></div>
-</div>
-<script src="products.js"></script>
-<script>
-(function(){
-  var PRODUCTS = window.PRODUCTS || [];
-  var grid = document.getElementById('grid');
-  var q = document.getElementById('q');
-  var filter = 'all';
-  var covers = {roi:['AI Automation ROI','Cost-benefit before you invest','#315C4A'],cash:['13-Week Cash Flow','Liquidity and runway','#111827'],agency:['Agency Operating System','Packaging · SOPs · Pricing','#315C4A'],scope:['Anti-Scope Creep','Boundaries that stick','#B08D3C'],ledger:['The Freedom Ledger','Debt payoff tracker','#111827'],saas:['Micro-SaaS Blueprint','Idea to small revenue','#315C4A']};
-  function esc(s){ return String(s||'').replace(/&/g,'&').replace(/</g,'<').replace(/"/g,'"'); }
-  function mediaHtml(p){
-    if (p.img) return '<img src="'+esc(p.img)+'" alt="'+esc(p.name)+'" loading="lazy" width="400" height="400" />';
-    if (p.cover && covers[p.cover]) {
-      var t=covers[p.cover][0], s=covers[p.cover][1], a=covers[p.cover][2];
-      return '<div class="ph" style="border-left:6px solid '+a+'"><div style="font-size:11px;letter-spacing:.12em;color:#B08D3C;font-weight:700;margin-bottom:16px">IZO</div><div style="font-family:Georgia,serif;font-size:18px;color:#111827;line-height:1.3;margin-bottom:8px">'+esc(t)+'</div><div style="font-size:13px;color:#5c5c5c">'+esc(s)+'</div><div style="margin-top:auto;padding-top:28px;font-size:11px;color:#8a857c">'+esc(p.type)+' · Payhip</div></div>';
-    }
-    return '<div class="ph" style="place-items:center;display:grid;text-align:center">'+esc(p.type||'Digital')+' · '+esc(p.platform)+'</div>';
-  }
-  function card(p){
-    return '<article class="card" role="listitem"><div class="card-media">'+mediaHtml(p)+'<span class="badge">'+esc(p.platform)+'</span></div><div class="card-body"><h3>'+esc(p.name)+'</h3><p class="vp">'+esc(p.vp)+'</p><div class="card-meta"><span class="price">'+esc(p.price)+'</span><span class="platform">'+esc(p.type||'')+'</span></div><a class="cta" href="'+esc(p.url)+'" target="_blank" rel="noopener">View Product</a></div></article>';
-  }
-  function render(){
-    var term = (q.value||'').toLowerCase().trim();
-    var list = PRODUCTS.filter(function(p){
-      if (filter !== 'all' && p.cat !== filter && p.platform !== filter) return false;
-      if (term && !(p.name||'').toLowerCase().includes(term) && !(p.vp||'').toLowerCase().includes(term) && !(p.platform||'').toLowerCase().includes(term)) return false;
-      return true;
-    });
-    grid.innerHTML = list.length ? list.map(card).join('') : '<p class="empty-msg">No products match. Email maanizozo9@gmail.com</p>';
-  }
-  document.getElementById('filters').addEventListener('click', function(e){
-    var b = e.target.closest('.chip'); if (!b) return;
-    document.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('active'); });
-    b.classList.add('active'); filter = b.dataset.f; render();
-  });
-  q.addEventListener('input', render);
-  render();
-  window.addEventListener('scroll', function(){ document.getElementById('hdr').classList.toggle('scrolled', window.scrollY > 12); }, {passive:true});
-  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) e.target.classList.add('in'); }); }, {threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-  setTimeout(function(){ document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }, 600);
-  var panel = document.getElementById('chat-panel'), body = document.getElementById('chat-b'), input = document.getElementById('chat-in');
-  document.getElementById('chat-btn').onclick = function(){ panel.classList.toggle('open'); };
-  document.getElementById('chat-x').onclick = function(){ panel.classList.remove('open'); };
-  function findBy(keys){
-    return PRODUCTS.filter(function(p){
-      var hay = ((p.name||'')+' '+(p.vp||'')+' '+(p.cat||'')+' '+(p.type||'')).toLowerCase();
-      return keys.some(function(k){ return hay.indexOf(k) !== -1; });
-    });
-  }
-  function listLines(items){ return items.slice(0,6).map(function(p){ return '• '+p.name+' ('+p.price+', '+p.platform+')'; }).join('\n'); }
-  function answer(t){
-    var s = t.toLowerCase();
-    if (/invoice|crm|client|overdue/.test(s)) { var items=findBy(['crm','invoice','client']); return items.length ? 'For clients and invoices:\n'+listLines(items) : 'Email maanizozo9@gmail.com'; }
-    if (/adhd|planner|morning|study|exam|routine/.test(s)) { var items=findBy(['adhd','planner','study','morning','gentle']); return items.length ? 'ADHD & study tools:\n'+listLines(items)+'\nOrganizational aids only — not medical advice.' : 'Email maanizozo9@gmail.com'; }
-    if (/offer|signal|checklist|demand|valid/.test(s)) { var items=findBy(['offer','signal','checklist']); return items.length ? 'Offer tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com'; }
-    if (/scope|proposal|creep/.test(s)) { var items=findBy(['scope','proposal','creep']); return items.length ? 'Scope tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com'; }
-    if (/finance|cash|debt|ledger|profit/.test(s)) { var items=findBy(['finance','cash','debt','ledger','profit']); return items.length ? 'Finance tools:\n'+listLines(items) : 'Email maanizozo9@gmail.com'; }
-    if (/deliver|download|access|checkout/.test(s)) return 'After checkout on Shopify, Whop or Payhip you get instant digital access. Keep the order email. Issues: maanizozo9@gmail.com';
-    if (/support|human|email|help me|refund/.test(s)) return 'Email maanizozo9@gmail.com with product name, platform, and order ID if you have one.';
-    return 'I only answer from products on this site. Please email maanizozo9@gmail.com.';
-  }
-  function sendMsg(text){
-    if (!text || !text.trim()) return;
-    var u=document.createElement('div'); u.className='msg user'; u.textContent=text; body.appendChild(u);
-    setTimeout(function(){ var b=document.createElement('div'); b.className='msg bot'; b.style.whiteSpace='pre-wrap'; b.textContent=answer(text); body.appendChild(b); body.scrollTop=body.scrollHeight; }, 250);
-  }
-  document.getElementById('chat-go').onclick=function(){ sendMsg(input.value); input.value=''; };
-  input.addEventListener('keydown', function(e){ if (e.key==='Enter'){ sendMsg(input.value); input.value=''; } });
-  document.querySelectorAll('.chat-q button').forEach(function(btn){ btn.onclick=function(){ sendMsg(btn.dataset.q); }; });
-})();
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="4nvsRVOKGdhgItYuD_zfRUoXWm3zK8gvaqhfFjJDUr0" />
+    <meta name="theme-color" content="#0B1622" />
+    <title>IZO-KING — Useful Digital Tools, Made for Real Life</title>
+    <meta
+      name="description"
+      content="IZO-KING builds premium digital tools and practical systems for freelancers, creators, students and small businesses. Excel templates, ADHD-friendly planners, finance dashboards, offer playbooks and B2B decision systems. 100% digital delivery."
+    />
+    <meta name="keywords" content="IZO-KING, digital products, Excel templates, ADHD planner, freelancer CRM, small business finance tracker, offer validation, B2B sales tools, digital downloads" />
+    <meta name="author" content="IZO-KING" />
+    <link rel="canonical" href="https://izo-king-storefront-ismails-projects-325f8bd4.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="IZO-KING" />
+    <meta property="og:title" content="IZO-KING — Useful Digital Tools, Made for Real Life" />
+    <meta property="og:description" content="Focused systems for work, study, business and growth. Premium digital tools for freelancers, creators, students and small businesses." />
+    <meta property="og:image" content="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/hero-studio.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IZO-KING — Useful Digital Tools, Made for Real Life" />
+    <meta name="twitter:description" content="Focused systems for work, study, business and growth. 100% digital delivery." />
+    <meta name="twitter:image" content="https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/hero-studio.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-CR7N8w7h.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BsWtnWcg.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
