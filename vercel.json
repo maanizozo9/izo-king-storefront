@@ -7,6 +7,8 @@
     { "source": "/media/hero-studio.jpg", "destination": "https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/hero-studio.jpg" },
     { "source": "/media/about-desk.jpg", "destination": "https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/about-desk.jpg" },
     { "source": "/media/:file*", "destination": "/:file*" },
-    { "source": "/((?!index-|whop-|cta-|favicon|robots|sitemap|api/|1-3-|brand/).*)", "destination": "/index.html" }
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/blog/", "destination": "/blog/index.html" },
+    { "source": "/((?!index-|whop-|cta-|favicon|robots|sitemap|api/|1-3-|brand/|blog/|izo-|products\\.js).*)", "destination": "/index.html" }
   ]
 }
