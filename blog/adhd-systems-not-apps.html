@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Why ADHD brains need systems, not more apps — IZO-KING</title>
+<meta name="description" content="Most productivity apps assume consistent memory. Practical systems reduce decisions instead of adding dashboards."/>
+<link rel="canonical" href="https://izo-king-studio.vercel.app/blog/adhd-systems-not-apps.html"/>
+<link rel="icon" href="/1-3-1000061052.jpg"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#111827;--ivory:#FAF9F6;--beige:#F1EDE5;--gold:#B08D3C;--green:#315C4A;--char:#252525}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--beige);color:var(--char);line-height:1.65}
+a{color:var(--gold)}header{background:var(--navy);color:var(--ivory);padding:16px 24px;display:flex;align-items:center;gap:12px}
+header img{width:40px;height:40px;border-radius:50%;object-fit:cover}header a{color:var(--ivory);text-decoration:none;font-weight:600}
+main{max-width:720px;margin:0 auto;padding:32px 20px 80px}
+article{background:var(--ivory);border:1px solid #e5dfd3;border-radius:14px;padding:28px 24px}
+h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:1.75rem;color:var(--navy);margin:6px 0 12px}
+.meta{font-size:12px;color:#7a7368}.tag{color:var(--green);font-weight:600}
+.prose p{margin:0 0 1em}.comments{margin-top:28px;padding-top:20px;border-top:1px solid #e5dfd3}
+.comments textarea,.comments input{width:100%;padding:10px;border:1px solid #d9d1c3;border-radius:10px;margin:6px 0;font:inherit}
+.comments button{background:var(--navy);color:var(--ivory);border:none;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:600}
+#list .c{background:#fff;border:1px solid #e8e2d6;border-radius:10px;padding:12px;margin:10px 0}
+footer{text-align:center;padding:24px;font-size:13px;color:#7a7368}
+</style>
+</head>
+<body data-post="adhd-systems-not-apps">
+<header><img src="/1-3-1000061052.jpg" alt="IZO"/><a href="/">IZO-KING</a><a href="/blog/" style="margin-left:auto">All insights</a></header>
+<main>
+<article>
+<div class="meta"><span class="tag">ADHD & Focus</span> · <time>2026-09-20</time></div>
+<h1>Why ADHD brains need systems, not more apps</h1>
+<div class="prose">
+<p>If you live with ADHD, downloading another planner app rarely fixes the day. Reports and practitioner guides in 2026 still point to the same friction: time blindness, task initiation, and too many open loops.</p>
+<p>What works better is a <strong>visible system</strong> with fewer choices: a daily/weekly board you can see, a morning routine that does not depend on motivation, and exam tracking that does not rely on memory alone.</p>
+<p>IZO tools such as The Clear Start planner, ADHD Morning Routine Bundle, and The Study Start exam tracker are built as simple digital systems — not another social feed of tasks.</p>
+<p><strong>Try this week:</strong> pick one planning surface only. Move tomorrow’s top three tasks there tonight. Ignore the rest of the tool stack until that habit sticks.</p>
+</div>
+</article>
+<section class="comments">
+<h3>Comments</h3>
+<p style="font-size:14px;color:#7a7368">Comments stay in your browser only. For a private reply, email maanizozo9@gmail.com.</p>
+<div id="list"></div>
+<form id="cform"><input id="cname" placeholder="Name (optional)" maxlength="40"/><textarea id="ctext" rows="3" placeholder="Your comment..." maxlength="800" required></textarea><button type="submit">Post comment</button></form>
+</section>
+</main>
+<footer>© IZO-KING · <a href="/blog/">Insights</a> · <a href="/">Store</a></footer>
+<script>
+(function(){var key='izo-comments-'+document.body.getAttribute('data-post');var list=document.getElementById('list');var form=document.getElementById('cform');
+function render(){var items=[];try{items=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){}
+list.innerHTML=items.length?items.map(function(c){return '<div class="c"><strong>'+c.name.replace(/</g,'')+'</strong><span> '+c.at+'</span><p>'+c.text.replace(/</g,'')+'</p></div>'}).join(''):'<p style="color:#8a8278;font-size:14px">No comments yet — be the first.</p>';}
+render();form.onsubmit=function(e){e.preventDefault();var name=document.getElementById('cname').value.trim()||'Guest';var text=document.getElementById('ctext').value.trim();if(!text)return;var items=[];try{items=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){}
+items.unshift({name:name,text:text,at:new Date().toISOString().slice(0,10)});localStorage.setItem(key,JSON.stringify(items.slice(0,50)));document.getElementById('ctext').value='';render();};})();
+</script>
+<script src="/products.js"></script><script src="/izo-chat.js"></script>
+</body></html>
