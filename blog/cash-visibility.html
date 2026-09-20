@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Cash visibility beats complex accounting software — IZO-KING</title>
+<meta name="description" content="Small operators need weekly clarity on income, expenses, and runway."/>
+<link rel="canonical" href="https://izo-king-studio.vercel.app/blog/cash-visibility.html"/>
+<link rel="icon" href="/1-3-1000061052.jpg"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#111827;--ivory:#FAF9F6;--beige:#F1EDE5;--gold:#B08D3C;--green:#315C4A;--char:#252525}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--beige);color:var(--char);line-height:1.65}
+a{color:var(--gold)}header{background:var(--navy);color:var(--ivory);padding:16px 24px;display:flex;align-items:center;gap:12px}
+header img{width:40px;height:40px;border-radius:50%;object-fit:cover}header a{color:var(--ivory);text-decoration:none;font-weight:600}
+main{max-width:720px;margin:0 auto;padding:32px 20px 80px}
+article{background:var(--ivory);border:1px solid #e5dfd3;border-radius:14px;padding:28px 24px}
+h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:1.75rem;color:var(--navy);margin:6px 0 12px}
+.meta{font-size:12px;color:#7a7368}.tag{color:var(--green);font-weight:600}
+.prose p{margin:0 0 1em}.comments{margin-top:28px;padding-top:20px;border-top:1px solid #e5dfd3}
+.comments textarea,.comments input{width:100%;padding:10px;border:1px solid #d9d1c3;border-radius:10px;margin:6px 0;font:inherit}
+.comments button{background:var(--navy);color:var(--ivory);border:none;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:600}
+#list .c{background:#fff;border:1px solid #e8e2d6;border-radius:10px;padding:12px;margin:10px 0}
+footer{text-align:center;padding:24px;font-size:13px;color:#7a7368}
+</style>
+</head>
+<body data-post="cash-visibility">
+<header><img src="/1-3-1000061052.jpg" alt="IZO"/><a href="/">IZO-KING</a><a href="/blog/" style="margin-left:auto">All insights</a></header>
+<main>
+<article>
+<div class="meta"><span class="tag">Finance</span> · <time>2026-09-17</time></div>
+<h1>Cash visibility beats complex accounting software</h1>
+<div class="prose">
+<p>Many small businesses open an accounting tool and never maintain it. What they actually need is a <strong>weekly picture</strong>: what came in, what went out, and whether next month is safe.</p>
+<p>A focused finance tracker or cash-flow framework can surface problems early — late invoices, silent expense creep, or a product that looks busy but does not pay.</p>
+<p>Start with one dashboard you open every Friday. Expand only when that habit is real.</p>
+<p>Explore IZO’s Small Business Finance Tracker, Freedom Ledger debt tracker, and cash-flow guides when you want structure without a heavy suite.</p>
+</div>
+</article>
+<section class="comments">
+<h3>Comments</h3>
+<p style="font-size:14px;color:#7a7368">Comments stay in your browser only. For a private reply, email maanizozo9@gmail.com.</p>
+<div id="list"></div>
+<form id="cform"><input id="cname" placeholder="Name (optional)" maxlength="40"/><textarea id="ctext" rows="3" placeholder="Your comment..." maxlength="800" required></textarea><button type="submit">Post comment</button></form>
+</section>
+</main>
+<footer>© IZO-KING · <a href="/blog/">Insights</a> · <a href="/">Store</a></footer>
+<script>
+(function(){var key='izo-comments-'+document.body.getAttribute('data-post');var list=document.getElementById('list');var form=document.getElementById('cform');
+function render(){var items=[];try{items=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){}
+list.innerHTML=items.length?items.map(function(c){return '<div class="c"><strong>'+c.name.replace(/</g,'')+'</strong><span> '+c.at+'</span><p>'+c.text.replace(/</g,'')+'</p></div>'}).join(''):'<p style="color:#8a8278;font-size:14px">No comments yet — be the first.</p>';}
+render();form.onsubmit=function(e){e.preventDefault();var name=document.getElementById('cname').value.trim()||'Guest';var text=document.getElementById('ctext').value.trim();if(!text)return;var items=[];try{items=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){}
+items.unshift({name:name,text:text,at:new Date().toISOString().slice(0,10)});localStorage.setItem(key,JSON.stringify(items.slice(0,50)));document.getElementById('ctext').value='';render();};})();
+</script>
+<script src="/products.js"></script><script src="/izo-chat.js"></script>
+</body></html>
