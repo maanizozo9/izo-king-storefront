@@ -1,31 +1,18 @@
 {
   "rewrites": [
-    {
-      "source": "/assets/:path*",
-      "destination": "https://dnp64f-745wi6899-arcadawebapps2.vercel.app/assets/:path*"
-    },
-    {
-      "source": "/media/:path*",
-      "destination": "https://dnp64f-745wi6899-arcadawebapps2.vercel.app/media/:path*"
-    },
-    {
-      "source": "/((?!assets/|media/|favicon.svg|robots.txt|sitemap.xml).*)",
-      "destination": "/index.html"
-    }
+    { "source": "/assets/index-BsWtnWcg.css", "destination": "/index-BsWtnWcg.css" },
+    { "source": "/assets/index-CR7N8w7h.js", "destination": "/index-CR7N8w7h.js" },
+    { "source": "/media/:file*", "destination": "/:file*" },
+    { "source": "/((?!assets/|media/|favicon.svg|robots.txt|sitemap.xml|index-|whop-|cta-|api/).*)", "destination": "/index.html" }
   ],
   "headers": [
     {
-      "source": "/assets/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
+      "source": "/(index-.*\\.(css|js))",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
     },
     {
-      "source": "/media/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
-      ]
+      "source": "/(.*\\.(jpg|jpeg|png|webp|svg))",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
     }
   ]
 }
