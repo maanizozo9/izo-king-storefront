@@ -52,4 +52,6 @@ render();form.onsubmit=function(e){e.preventDefault();var name=document.getEleme
 items.unshift({name:name,text:text,at:new Date().toISOString().slice(0,10)});localStorage.setItem(key,JSON.stringify(items.slice(0,50)));document.getElementById('ctext').value='';render();};})();
 </script>
 <script src="/products.js"></script><script src="/izo-chat.js"></script>
+<!-- Vercel Web Analytics -->
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </body></html>
