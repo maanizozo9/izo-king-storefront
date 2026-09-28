@@ -1,10 +1,10 @@
-# IZO-KING Storefront
+# izo-king-storefront
 
-Conversion landing page for low-ticket digital products (Whop checkout links).
+IZO-KING / ISMAIL GROUP conversion storefront — low-ticket digital products landing page
 
-## Products featured
-- 7-Day Offer Test Checklist — $5
-- Offer Signal Lab — $7
-- Client Offer Engine — $9
+## Software tools
+- **NextStep** — external (ismail.group)
+- **LeadSignal** — `/leadsignal.html`
+- **SignalPilot** — `/signalpilot.html` — opportunity scoring, Known/Inferred/Unknown evidence, outreach drafts, local pipeline
 
-Brand: navy + gold IZO-KING system.
+See `IMPLEMENTATION_PLAN.md` for SignalPilot architecture.
