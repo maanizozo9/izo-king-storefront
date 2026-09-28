@@ -3,14 +3,29 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>SignalPilot — Opportunity Intelligence for B2B Agencies | IZO-KING</title>
-<meta name="description" content="SignalPilot analyzes real public company websites: opportunity scores from fetched HTML, Known/Inferred/Unknown evidence, outreach drafts, local pipeline. Payments via Whop."/>
+<title>SignalPilot — B2B Opportunity Scoring & Agency Prospecting Tool | IZO-KING</title>
+<meta name="description" content="SignalPilot scores B2B sales opportunities from real public company websites. Fit, Need, Timing scores, Known/Inferred/Unknown evidence, compliant outreach drafts. For agencies and service providers."/>
+<meta name="keywords" content="B2B opportunity scoring, agency prospecting tool, sales intelligence, lead research, public website signals, outbound prioritization, compliant outreach"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
 <link rel="canonical" href="https://izo-king-studio.vercel.app/signalpilot.html"/>
-<meta property="og:title" content="SignalPilot — Opportunity Intelligence | IZO-KING"/>
-<meta property="og:description" content="Real public-page analysis for B2B opportunity scoring."/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="IZO-KING"/>
+<meta property="og:title" content="SignalPilot — B2B Opportunity Scoring for Agencies"/>
+<meta property="og:description" content="Analyze public company websites. Score Fit/Need/Timing. Draft compliant outreach. Track next actions."/>
+<meta property="og:url" content="https://izo-king-studio.vercel.app/signalpilot.html"/>
 <meta property="og:image" content="https://izo-king-studio.vercel.app/1-3-1000061052.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="SignalPilot — B2B Opportunity Scoring | IZO-KING"/>
+<meta name="twitter:description" content="Public-page analysis for agency prospecting and sales prioritization."/>
+<meta name="twitter:image" content="https://izo-king-studio.vercel.app/1-3-1000061052.jpg"/>
 <link rel="icon" href="/1-3-1000061052.jpg"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SignalPilot","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://izo-king-studio.vercel.app/signalpilot.html","description":"B2B opportunity intelligence: score Fit/Need/Timing from public company websites, label Known/Inferred/Unknown evidence, draft compliant outreach, track next actions.","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free tier"},{"@type":"Offer","price":"29","priceCurrency":"USD","description":"Starter monthly","url":"https://whop.com/checkout/plan_3A6bR7tl6VG9G"},{"@type":"Offer","price":"99","priceCurrency":"USD","description":"Agency monthly","url":"https://whop.com/checkout/plan_m9Ka2yFYAtedI"}],"publisher":{"@type":"Organization","name":"IZO-KING","url":"https://izo-king-studio.vercel.app/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does SignalPilot auto-send outreach messages?","acceptedAnswer":{"@type":"Answer","text":"No. SignalPilot generates drafts only. You review and send every message yourself."}},{"@type":"Question","name":"Where does SignalPilot data come from?","acceptedAnswer":{"@type":"Answer","text":"Only public HTML that can be fetched for the company website URL you enter. No private or scraped login data."}},{"@type":"Question","name":"Who is SignalPilot for?","acceptedAnswer":{"@type":"Answer","text":"Digital agencies, B2B freelancers, consultants, and service providers who need to prioritize accounts without a full CRM."}}]}
+</script>
 <style>
 :root{--navy:#0B1622;--ink:#111827;--ivory:#FAF9F6;--beige:#F1EDE5;--gold:#C4A35A;--gold-d:#B08D3C;--muted:#6B7280;--line:#E5DFD3;--green:#2F6B4F}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--beige);color:var(--ink);line-height:1.6}a{color:var(--gold-d)}
@@ -24,7 +39,7 @@ main{max-width:1040px;margin:0 auto;padding:32px 20px 80px}
 .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-d);border:1px solid rgba(176,141,60,.4);padding:5px 10px;border-radius:999px;margin-bottom:12px}
 h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(1.8rem,4vw,2.5rem);color:var(--navy);margin:0 0 12px}
 h2{font-family:Fraunces,Georgia,serif;font-weight:500;color:var(--navy);font-size:1.35rem;margin:0 0 10px}
-.lead{color:var(--muted);max-width:620px;margin-bottom:20px;font-size:1.05rem}
+.lead{color:var(--muted);max-width:640px;margin-bottom:20px;font-size:1.05rem}
 .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}
 .btn{display:inline-flex;align-items:center;gap:6px;padding:11px 16px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;border:none;cursor:pointer;font-family:inherit}
 .btn-navy{background:var(--navy);color:var(--ivory)}.btn-gold{background:var(--gold);color:var(--navy)}.btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink)}
@@ -66,16 +81,18 @@ footer{text-align:center;padding:24px;font-size:13px;color:#7a7368;border-top:1p
 .price-card.feat{border-color:var(--gold);box-shadow:0 8px 20px rgba(196,163,90,.15)}
 .price-card h3{margin:0 0 4px}.price-card .amt{font-size:1.5rem;font-weight:700;color:var(--navy);font-family:Fraunces,Georgia,serif}
 .disc{font-size:12px;color:#8a8378;margin-top:20px;line-height:1.5}.section{scroll-margin-top:80px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:8px 0}
+.faq summary{cursor:pointer;font-weight:600;color:var(--navy)}
 </style>
 </head>
 <body>
 <header>
-  <img src="/1-3-1000061052.jpg" alt="IZO-KING"/>
+  <img src="/1-3-1000061052.jpg" alt="IZO-KING logo"/>
   <a class="brand" href="/">IZO-KING</a>
   <nav>
     <a href="/tools.html">Tools</a>
-    <a href="#app" class="header-active">SignalPilot</a>
-    <a href="#pipeline">Pipeline</a>
+    <a href="/signalpilot.html" class="header-active">SignalPilot</a>
+    <a href="/leadsignal.html">LeadSignal</a>
     <a href="#pricing">Pricing</a>
     <button type="button" class="lang-btn" id="langBtn" onclick="toggleLang()">AR</button>
     <a class="pill" href="mailto:maanizozo9@gmail.com?subject=SignalPilot">Contact</a>
@@ -83,35 +100,36 @@ footer{text-align:center;padding:24px;font-size:13px;color:#7a7368;border-top:1p
 </header>
 <main>
   <section id="landing" class="section">
-    <div class="badge" data-i18n="badge">Software · Opportunity intelligence</div>
-    <h1 data-i18n="title">SignalPilot</h1>
-    <p class="lead" data-i18n="lead">Analyze a real public company website: score from page evidence, label Known/Inferred/Unknown, draft outreach, track next actions.</p>
+    <div class="badge">Software · B2B opportunity intelligence</div>
+    <h1>SignalPilot — B2B opportunity scoring for agencies</h1>
+    <p class="lead">Score sales opportunities from <strong>real public company websites</strong>. Fit, Need, Timing, Reachability and Evidence from fetched HTML. Known / Inferred / Unknown insights. Compliant outreach drafts. Light pipeline — without another CRM.</p>
     <div class="hero-actions">
-      <a class="btn btn-navy" href="#app" data-i18n="cta_open">Analyze a real company →</a>
-      <a class="btn btn-outline" href="/tools.html" data-i18n="cta_back">Back to tools</a>
+      <a class="btn btn-navy" href="#app">Analyze a public company URL →</a>
+      <a class="btn btn-outline" href="/tools.html">All tools</a>
+      <a class="btn btn-outline" href="https://whop.com/signalpilot-izo-king/" target="_blank" rel="noopener">Whop product</a>
     </div>
     <div class="grid3">
-      <article class="card"><div class="tag">01</div><h3 data-i18n="f1t">Score</h3><p data-i18n="f1d">Fit, Need, Timing, Reachability, Evidence from fetched HTML.</p></article>
-      <article class="card"><div class="tag">02</div><h3 data-i18n="f2t">Evidence</h3><p data-i18n="f2d">Known, Inferred, or Unknown — only from the page we retrieved.</p></article>
-      <article class="card"><div class="tag">03</div><h3 data-i18n="f3t">Outreach</h3><p data-i18n="f3d">Email, LinkedIn, WhatsApp drafts. You send; we never auto-send.</p></article>
+      <article class="card"><div class="tag">01</div><h3>Opportunity score</h3><p>Fit, Need, Timing, Reachability, Evidence — weighted heuristics on public HTML only.</p></article>
+      <article class="card"><div class="tag">02</div><h3>Evidence labels</h3><p>Every insight tagged Known, Inferred, or Unknown with a source hint.</p></article>
+      <article class="card"><div class="tag">03</div><h3>Compliant outreach</h3><p>Email, LinkedIn, WhatsApp drafts in EN/AR. You send — never auto-send.</p></article>
     </div>
   </section>
   <section id="app" class="section panel">
-    <h2 data-i18n="app_title">Analyze opportunity</h2>
-    <p style="font-size:13px;color:var(--muted);margin-top:-6px" data-i18n="app_hint">Paste a real public company website. Analysis runs only on HTML we can fetch — no fictional companies, no invented scores.</p>
+    <h2>Analyze opportunity</h2>
+    <p style="font-size:13px;color:var(--muted);margin-top:-6px">Paste a real public company website. Analysis runs only on HTML we can fetch — no fictional companies, no invented scores.</p>
     <div class="form-row">
-      <div><label for="urlInput" data-i18n="lbl_url">Company website URL</label><input type="url" id="urlInput" placeholder="https://example.com"/></div>
-      <div><label for="serviceInput" data-i18n="lbl_service">Your service (optional)</label><input type="text" id="serviceInput" placeholder="e.g. B2B SEO, bookkeeping"/></div>
+      <div><label for="urlInput">Company website URL</label><input type="url" id="urlInput" placeholder="https://example.com" autocomplete="url"/></div>
+      <div><label for="serviceInput">Your service (optional)</label><input type="text" id="serviceInput" placeholder="e.g. B2B SEO, bookkeeping"/></div>
     </div>
     <div class="form-row">
-      <div><label for="profileSelect" data-i18n="lbl_profile">Service profile</label>
+      <div><label for="profileSelect">Service profile</label>
         <select id="profileSelect"><option value="agency">Digital / marketing agency</option><option value="saas">SaaS / software</option><option value="ops">Ops / finance / bookkeeping</option><option value="general">General B2B services</option></select></div>
-      <div><label for="langOut" data-i18n="lbl_msg_lang">Outreach language</label>
+      <div><label for="langOut">Outreach language</label>
         <select id="langOut"><option value="en">English</option><option value="ar">العربية</option><option value="fr">Français</option></select></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:10px">
-      <button type="button" class="btn btn-navy" id="scanBtn" onclick="runScan()" data-i18n="btn_scan">Analyze public URL</button>
-      <button type="button" class="btn btn-outline" onclick="clearResult()" data-i18n="btn_clear">Clear</button>
+      <button type="button" class="btn btn-navy" id="scanBtn" onclick="runScan()">Analyze public URL</button>
+      <button type="button" class="btn btn-outline" onclick="clearResult()">Clear</button>
     </div>
     <div id="statusBox" class="status empty hidden"></div>
   </section>
@@ -119,36 +137,36 @@ footer{text-align:center;padding:24px;font-size:13px;color:#7a7368;border-top:1p
     <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
       <div><h2 id="companyName">—</h2><p id="companyMeta" style="margin:0;font-size:13px;color:var(--muted)"></p></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button type="button" class="btn btn-outline" onclick="addToPipeline()" data-i18n="btn_pipe">+ Pipeline</button>
-        <button type="button" class="btn btn-outline" onclick="exportJSON()" data-i18n="btn_json">Export JSON</button>
-        <button type="button" class="btn btn-outline" onclick="exportCSV()" data-i18n="btn_csv">Export CSV</button>
+        <button type="button" class="btn btn-outline" onclick="addToPipeline()">+ Pipeline</button>
+        <button type="button" class="btn btn-outline" onclick="exportJSON()">Export JSON</button>
+        <button type="button" class="btn btn-outline" onclick="exportCSV()">Export CSV</button>
       </div>
     </div>
     <div class="score-wrap">
       <div class="score-ring" id="scoreRing" style="--p:0"><span id="scoreNum">0</span></div>
       <div class="dims" id="dimBars"></div>
     </div>
-    <h3 style="font-size:1rem;margin:18px 0 8px;color:var(--navy)" data-i18n="insights_h">Insights</h3>
+    <h3 style="font-size:1rem;margin:18px 0 8px;color:var(--navy)">Insights</h3>
     <div id="insightsList"></div>
-    <h3 style="font-size:1rem;margin:18px 0 8px;color:var(--navy)" data-i18n="outreach_h">Outreach draft</h3>
+    <h3 style="font-size:1rem;margin:18px 0 8px;color:var(--navy)">Outreach draft</h3>
     <div class="tabs" id="msgTabs">
       <button type="button" class="tab active" data-ch="email" onclick="setChannel('email')">Email</button>
       <button type="button" class="tab" data-ch="linkedin" onclick="setChannel('linkedin')">LinkedIn</button>
       <button type="button" class="tab" data-ch="whatsapp" onclick="setChannel('whatsapp')">WhatsApp</button>
     </div>
     <div class="msg-box" id="msgBox"></div>
-    <button type="button" class="btn btn-navy" style="margin-top:10px" onclick="copyMsg()" data-i18n="btn_copy">Copy message</button>
-    <p class="disc" data-i18n="disc_outreach">You send. We never auto-send.</p>
+    <button type="button" class="btn btn-navy" style="margin-top:10px" onclick="copyMsg()">Copy message</button>
+    <p class="disc">You send. We never auto-send.</p>
   </section>
   <section id="pipeline" class="section panel">
-    <h2 data-i18n="pipe_title">Pipeline</h2>
-    <p style="font-size:13px;color:var(--muted);margin-top:-6px" data-i18n="pipe_hint">Browser localStorage only.</p>
+    <h2>Pipeline</h2>
+    <p style="font-size:13px;color:var(--muted);margin-top:-6px">Browser localStorage only.</p>
     <div class="pipeline" id="pipelineBoard"></div>
-    <button type="button" class="btn btn-outline" style="margin-top:12px" onclick="clearPipeline()" data-i18n="btn_clear_pipe">Clear pipeline</button>
+    <button type="button" class="btn btn-outline" style="margin-top:12px" onclick="clearPipeline()">Clear pipeline</button>
   </section>
   <section id="pricing" class="section panel">
-    <h2 data-i18n="price_title">Pricing</h2>
-    <p style="font-size:13px;color:var(--muted);margin-top:-6px">Payments on <strong>Whop</strong> under product <strong>SignalPilot</strong> (ISMAIL.GROUP.AI). Real checkout.</p>
+    <h2>Pricing</h2>
+    <p style="font-size:13px;color:var(--muted);margin-top:-6px">Payments on <strong>Whop</strong> — product <strong>SignalPilot</strong>.</p>
     <div class="pricing">
       <div class="price-card">
         <h3>Free</h3>
@@ -158,21 +176,26 @@ footer{text-align:center;padding:24px;font-size:13px;color:#7a7368;border-top:1p
       <div class="price-card feat">
         <h3>Starter</h3>
         <div class="amt">$29<span style="font-size:.9rem;font-weight:500">/mo</span></div>
-        <p style="font-size:13px;color:var(--muted)">Monthly Whop membership. Priority support after payment.</p>
+        <p style="font-size:13px;color:var(--muted)">Monthly membership on Whop.</p>
         <a class="btn btn-navy" style="margin-top:10px" href="https://whop.com/checkout/plan_3A6bR7tl6VG9G" target="_blank" rel="noopener">Pay Starter on Whop →</a>
       </div>
       <div class="price-card">
         <h3>Agency</h3>
         <div class="amt">$99<span style="font-size:.9rem;font-weight:500">/mo</span></div>
-        <p style="font-size:13px;color:var(--muted)">Monthly Whop membership for team use and higher capacity.</p>
+        <p style="font-size:13px;color:var(--muted)">Team use and higher capacity.</p>
         <a class="btn btn-outline" style="margin-top:10px" href="https://whop.com/checkout/plan_m9Ka2yFYAtedI" target="_blank" rel="noopener">Pay Agency on Whop →</a>
       </div>
     </div>
-    <p style="font-size:13px;color:var(--muted);margin-top:14px">Product page: <a href="https://whop.com/signalpilot-izo-king/" target="_blank" rel="noopener">whop.com/signalpilot-izo-king</a> · Support: <a href="mailto:maanizozo9@gmail.com">maanizozo9@gmail.com</a></p>
   </section>
-  <p class="disc"><strong>Ethics:</strong> Public pages only. Scores are heuristics computed only from public HTML actually fetched for the URL you entered — decision support, not guarantees. Part of IZO-KING with NextStep and LeadSignal. <a href="mailto:maanizozo9@gmail.com">maanizozo9@gmail.com</a></p>
+  <section id="faq" class="section panel faq">
+    <h2>FAQ</h2>
+    <details><summary>Does SignalPilot auto-send messages?</summary><p style="font-size:14px;color:var(--muted)">No. Drafts only — you review and send.</p></details>
+    <details><summary>Where does the data come from?</summary><p style="font-size:14px;color:var(--muted)">Public HTML fetched for the URL you enter. Nothing behind logins.</p></details>
+    <details><summary>Who is it for?</summary><p style="font-size:14px;color:var(--muted)">Agencies, B2B freelancers, and service sellers who need prioritization without a heavy CRM.</p></details>
+  </section>
+  <p class="disc"><strong>Ethics:</strong> Public pages only. Scores are heuristics from fetched HTML — decision support, not guarantees. Related tools: <a href="/tools.html">NextStep</a> · <a href="/leadsignal.html">LeadSignal</a>. <a href="mailto:maanizozo9@gmail.com">maanizozo9@gmail.com</a></p>
 </main>
-<footer>© IZO-KING · <a href="/tools.html">Tools</a> · <a href="/signalpilot.html">SignalPilot</a> · <a href="/leadsignal.html">LeadSignal</a> · <a href="/">Studio</a></footer>
+<footer>© IZO-KING · <a href="/tools.html">Tools</a> · <a href="/signalpilot.html">SignalPilot</a> · <a href="/leadsignal.html">LeadSignal</a> · <a href="/blog/">Insights</a> · <a href="/">Studio</a></footer>
 <script src="/signalpilot-app.js"></script>
 </body>
 </html>
