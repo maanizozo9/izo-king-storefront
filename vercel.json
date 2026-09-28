@@ -55,7 +55,7 @@
       "destination": "/signalpilot.html"
     },
     {
-      "source": "/((?!api/|index-|whop-|cta-|favicon|robots|sitemap|1-3-|brand/|blog/|izo-|products\\.js|tools-home\\.js|tools\\.html|leadsignal\\.html|signalpilot\\.html|start-here\\.html|compare\\.html|about\\.html|faq\\.html|contact\\.html|privacy\\.html|terms\\.html).*)",
+      "source": "/((?!api/|index-|whop-|cta-|favicon|robots|sitemap|1-3-|brand/|blog/|izo-|products\\.js|tools-home\\.js|tools\\.html|leadsignal\\.html|signalpilot\\.html|signalpilot-app\\.js|start-here\\.html|compare\\.html|about\\.html|faq\\.html|contact\\.html|privacy\\.html|terms\\.html).*)",
       "destination": "/index.html"
     }
   ]
