@@ -1,1 +1,166 @@
-PLACEHOLDER
+<!doctype html>
+<html lang="en" id="htmlRoot">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SignalPilot — Opportunity Intelligence for B2B Agencies | IZO-KING</title>
+<meta name="description" content="SignalPilot helps agencies discover companies likely to need their service, score opportunities with Known/Inferred/Unknown evidence, generate compliant outreach, and track next actions."/>
+<link rel="canonical" href="https://izo-king-studio.vercel.app/signalpilot.html"/>
+<meta property="og:title" content="SignalPilot — Opportunity Intelligence | IZO-KING"/>
+<meta property="og:description" content="Turn public company signals into prioritized, evidence-backed sales opportunities."/>
+<meta property="og:image" content="https://izo-king-studio.vercel.app/1-3-1000061052.jpg"/>
+<link rel="icon" href="/1-3-1000061052.jpg"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#0B1622;--ink:#111827;--ivory:#FAF9F6;--beige:#F1EDE5;--gold:#C4A35A;--gold-d:#B08D3C;--muted:#6B7280;--line:#E5DFD3;--green:#2F6B4F}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--beige);color:var(--ink);line-height:1.6}a{color:var(--gold-d)}
+header{background:var(--navy);color:var(--ivory);padding:14px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:50}
+header img{width:40px;height:40px;border-radius:50%;object-fit:cover}header a.brand{color:var(--ivory);text-decoration:none;font-weight:600}
+header nav{margin-left:auto;display:flex;gap:12px;align-items:center;font-size:14px;flex-wrap:wrap}
+header nav a{color:rgba(250,249,246,.85);text-decoration:none}.header-active{color:var(--gold)!important}
+.pill{padding:6px 12px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:600;font-size:13px;text-decoration:none;border:none;cursor:pointer}
+.lang-btn{background:transparent;border:1px solid rgba(250,249,246,.3);color:var(--ivory);padding:4px 10px;border-radius:8px;cursor:pointer;font-size:12px}
+main{max-width:1040px;margin:0 auto;padding:32px 20px 80px}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-d);border:1px solid rgba(176,141,60,.4);padding:5px 10px;border-radius:999px;margin-bottom:12px}
+h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(1.8rem,4vw,2.5rem);color:var(--navy);margin:0 0 12px}
+h2{font-family:Fraunces,Georgia,serif;font-weight:500;color:var(--navy);font-size:1.35rem;margin:0 0 10px}
+.lead{color:var(--muted);max-width:620px;margin-bottom:20px;font-size:1.05rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 16px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;border:none;cursor:pointer;font-family:inherit}
+.btn-navy{background:var(--navy);color:var(--ivory)}.btn-gold{background:var(--gold);color:var(--navy)}.btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:24px 0}
+.card{background:var(--ivory);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{font-family:Fraunces,Georgia,serif;font-weight:500;margin:0 0 6px;font-size:1.05rem;color:var(--navy)}
+.card p{margin:0;font-size:13px;color:var(--muted)}.tag{font-size:11px;font-weight:700;color:var(--gold-d);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.panel{background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:22px;margin:20px 0}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--navy)}
+input[type=text],input[type=url],select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff;margin-bottom:12px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.form-row{grid-template-columns:1fr}}
+.score-wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin:16px 0}
+.score-ring{width:96px;height:96px;border-radius:50%;background:conic-gradient(var(--gold) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;position:relative}
+.score-ring::before{content:"";position:absolute;inset:8px;background:var(--ivory);border-radius:50%}
+.score-ring span{position:relative;font-weight:700;font-size:1.4rem;color:var(--navy);font-family:Fraunces,Georgia,serif}
+.dims{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;flex:1}
+.dim{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.dim strong{display:block;font-size:1.1rem;color:var(--navy)}.dim span{font-size:11px;color:var(--muted);text-transform:uppercase}
+.insight{border-left:3px solid var(--line);padding:10px 12px;margin:8px 0;background:#fff;border-radius:0 10px 10px 0;font-size:14px}
+.insight.known{border-color:var(--green)}.insight.inferred{border-color:var(--gold-d)}.insight.unknown{border-color:var(--muted)}
+.badge-k{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 6px;border-radius:4px;margin-right:6px}
+.badge-k.known{background:#d1fae5;color:#065f46}.badge-k.inferred{background:#fef3c7;color:#92400e}.badge-k.unknown{background:#f3f4f6;color:#4b5563}
+.msg-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;font-size:14px;white-space:pre-wrap;max-height:280px;overflow:auto;font-family:ui-monospace,monospace}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.tab{padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:13px;font-weight:600}
+.tab.active{background:var(--navy);color:var(--ivory);border-color:var(--navy)}
+.pipeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:12px}
+.col{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-height:120px}
+.col h4{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.item{background:var(--beige);border-radius:8px;padding:8px;margin-bottom:6px;font-size:13px}
+.item strong{display:block;color:var(--navy)}
+.status{font-size:12px;padding:8px 12px;border-radius:8px;margin:10px 0}
+.status.loading{background:#eff6ff;color:#1e40af}.status.error{background:#fef2f2;color:#991b1b}.status.empty{background:#f9fafb;color:#6b7280}
+.hidden{display:none!important}
+footer{text-align:center;padding:24px;font-size:13px;color:#7a7368;border-top:1px solid var(--line)}footer a{color:#7a7368}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.price-card{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff}
+.price-card.feat{border-color:var(--gold);box-shadow:0 8px 20px rgba(196,163,90,.15)}
+.price-card h3{margin:0 0 4px}.price-card .amt{font-size:1.5rem;font-weight:700;color:var(--navy);font-family:Fraunces,Georgia,serif}
+.disc{font-size:12px;color:#8a8378;margin-top:20px;line-height:1.5}.section{scroll-margin-top:80px}
+</style>
+</head>
+<body>
+<header>
+  <img src="/1-3-1000061052.jpg" alt="IZO-KING"/>
+  <a class="brand" href="/">IZO-KING</a>
+  <nav>
+    <a href="/tools.html">Tools</a>
+    <a href="#app" class="header-active">SignalPilot</a>
+    <a href="#pipeline">Pipeline</a>
+    <a href="#pricing">Pricing</a>
+    <button type="button" class="lang-btn" id="langBtn" onclick="toggleLang()">AR</button>
+    <a class="pill" href="mailto:maanizozo9@gmail.com?subject=SignalPilot">Contact</a>
+  </nav>
+</header>
+<main>
+  <section id="landing" class="section">
+    <div class="badge" data-i18n="badge">Software · Opportunity intelligence</div>
+    <h1 data-i18n="title">SignalPilot</h1>
+    <p class="lead" data-i18n="lead">Discover companies that are likely to need your service, understand the evidence, prioritize the best accounts, generate compliant outreach, and track the next action — without another heavy CRM.</p>
+    <div class="hero-actions">
+      <a class="btn btn-navy" href="#app" data-i18n="cta_open">Open SignalPilot →</a>
+      <button type="button" class="btn btn-gold" onclick="runDemo()" data-i18n="cta_demo">Try demo (no URL needed)</button>
+      <a class="btn btn-outline" href="/tools.html" data-i18n="cta_back">Back to tools</a>
+    </div>
+    <div class="grid3">
+      <article class="card"><div class="tag">01</div><h3 data-i18n="f1t">Score</h3><p data-i18n="f1d">Fit, Need, Timing, Reachability, Evidence — transparent weights.</p></article>
+      <article class="card"><div class="tag">02</div><h3 data-i18n="f2t">Evidence</h3><p data-i18n="f2d">Every claim labeled Known, Inferred, or Unknown with a source hint.</p></article>
+      <article class="card"><div class="tag">03</div><h3 data-i18n="f3t">Outreach</h3><p data-i18n="f3d">Email, LinkedIn, WhatsApp drafts — EN & AR. Never auto-send.</p></article>
+    </div>
+  </section>
+  <section id="app" class="section panel">
+    <h2 data-i18n="app_title">Analyze opportunity</h2>
+    <p style="font-size:13px;color:var(--muted);margin-top:-6px" data-i18n="app_hint">Paste a public company website, or use Demo.</p>
+    <div class="form-row">
+      <div><label for="urlInput" data-i18n="lbl_url">Company website URL</label><input type="url" id="urlInput" placeholder="https://example.com"/></div>
+      <div><label for="serviceInput" data-i18n="lbl_service">Your service (optional)</label><input type="text" id="serviceInput" placeholder="e.g. B2B SEO, bookkeeping"/></div>
+    </div>
+    <div class="form-row">
+      <div><label for="profileSelect" data-i18n="lbl_profile">Service profile</label>
+        <select id="profileSelect"><option value="agency">Digital / marketing agency</option><option value="saas">SaaS / software</option><option value="ops">Ops / finance / bookkeeping</option><option value="general">General B2B services</option></select></div>
+      <div><label for="langOut" data-i18n="lbl_msg_lang">Outreach language</label>
+        <select id="langOut"><option value="en">English</option><option value="ar">العربية</option><option value="fr">Français</option></select></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px">
+      <button type="button" class="btn btn-navy" id="scanBtn" onclick="runScan()" data-i18n="btn_scan">Analyze URL</button>
+      <button type="button" class="btn btn-gold" onclick="runDemo()" data-i18n="btn_demo">Load demo company</button>
+      <button type="button" class="btn btn-outline" onclick="clearResult()" data-i18n="btn_clear">Clear</button>
+    </div>
+    <div id="statusBox" class="status empty hidden"></div>
+  </section>
+  <section id="result" class="section panel hidden">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+      <div><h2 id="companyName">—</h2><p id="companyMeta" style="margin:0;font-size:13px;color:var(--muted)"></p></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button type="button" class="btn btn-outline" onclick="addToPipeline()" data-i18n="btn_pipe">+ Pipeline</button>
+        <button type="button" class="btn btn-outline" onclick="exportJSON()" data-i18n="btn_json">Export JSON</button>
+        <button type="button" class="btn btn-outline" onclick="exportCSV()" data-i18n="btn_csv">Export CSV</button>
+      </div>
+    </div>
+    <div class="score-wrap">
+      <div class="score-ring" id="scoreRing" style="--p:0"><span id="scoreNum">0</span></div>
+      <div class="dims" id="dimBars"></div>
+    </div>
+    <h3 style="font-size:1rem;margin:18px 0 8px;color:var(--navy)" data-i18n="insights_h">Insights</h3>
+    <div id="insightsList"></div>
+    <h3 style="font-size:1rem;margin:18px 0 8px;color:var(--navy)" data-i18n="outreach_h">Outreach draft</h3>
+    <div class="tabs" id="msgTabs">
+      <button type="button" class="tab active" data-ch="email" onclick="setChannel('email')">Email</button>
+      <button type="button" class="tab" data-ch="linkedin" onclick="setChannel('linkedin')">LinkedIn</button>
+      <button type="button" class="tab" data-ch="whatsapp" onclick="setChannel('whatsapp')">WhatsApp</button>
+    </div>
+    <div class="msg-box" id="msgBox"></div>
+    <button type="button" class="btn btn-navy" style="margin-top:10px" onclick="copyMsg()" data-i18n="btn_copy">Copy message</button>
+    <p class="disc" data-i18n="disc_outreach">You are responsible for sending. SignalPilot does not auto-send.</p>
+  </section>
+  <section id="pipeline" class="section panel">
+    <h2 data-i18n="pipe_title">Pipeline</h2>
+    <p style="font-size:13px;color:var(--muted);margin-top:-6px" data-i18n="pipe_hint">Stored in your browser only (localStorage).</p>
+    <div class="pipeline" id="pipelineBoard"></div>
+    <button type="button" class="btn btn-outline" style="margin-top:12px" onclick="clearPipeline()" data-i18n="btn_clear_pipe">Clear pipeline</button>
+  </section>
+  <section id="pricing" class="section panel">
+    <h2 data-i18n="price_title">Pricing</h2>
+    <div class="pricing">
+      <div class="price-card"><h3>Free</h3><div class="amt">$0</div><p style="font-size:13px;color:var(--muted)">Demo + limited local analyses.</p></div>
+      <div class="price-card feat"><h3>Starter</h3><div class="amt">$29<span style="font-size:.9rem;font-weight:500">/mo</span></div><p style="font-size:13px;color:var(--muted)">Higher limits, CSV batch (client).</p></div>
+      <div class="price-card"><h3>Agency</h3><div class="amt">$99<span style="font-size:.9rem;font-weight:500">/mo</span></div><p style="font-size:13px;color:var(--muted)">Team seats (coming), export packs.</p></div>
+    </div>
+    <p style="font-size:13px;color:var(--muted)">Billing not wired — contact for early access. No invented reviews.</p>
+    <a class="btn btn-gold" href="mailto:maanizozo9@gmail.com?subject=SignalPilot%20early%20access">Request early access</a>
+  </section>
+  <p class="disc"><strong>Ethics:</strong> Public pages only. Heuristic scores are decision support, not guarantees. Part of IZO-KING with NextStep and LeadSignal. <a href="mailto:maanizozo9@gmail.com">maanizozo9@gmail.com</a></p>
+</main>
+<footer>© IZO-KING · <a href="/tools.html">Tools</a> · <a href="/signalpilot.html">SignalPilot</a> · <a href="/leadsignal.html">LeadSignal</a> · <a href="/">Studio</a></footer>
+<script src="/signalpilot-app.js"></script>
+</body>
+</html>
