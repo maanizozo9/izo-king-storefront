@@ -55,7 +55,35 @@
       "destination": "/signalpilot.html"
     },
     {
-      "source": "/((?!api/|index-|whop-|cta-|favicon|robots|sitemap|1-3-|brand/|blog/|izo-|products\\.js|tools-home\\.js|tools\\.html|leadsignal\\.html|signalpilot\\.html|signalpilot-app\\.js|start-here\\.html|compare\\.html|about\\.html|faq\\.html|contact\\.html|privacy\\.html|terms\\.html).*)",
+      "source": "/business-tools",
+      "destination": "/business-tools.html"
+    },
+    {
+      "source": "/finance-templates",
+      "destination": "/finance-templates.html"
+    },
+    {
+      "source": "/adhd-study-tools",
+      "destination": "/adhd-study-tools.html"
+    },
+    {
+      "source": "/offer-validation-tools",
+      "destination": "/offer-validation-tools.html"
+    },
+    {
+      "source": "/b2b-decision-tools",
+      "destination": "/b2b-decision-tools.html"
+    },
+    {
+      "source": "/ai-automation-guides",
+      "destination": "/ai-automation-guides.html"
+    },
+    {
+      "source": "/free-resources",
+      "destination": "/free-resources.html"
+    },
+    {
+      "source": "/((?!api/|index-|whop-|cta-|favicon|robots|sitemap|1-3-|brand/|blog/|products/|izo-|products\\.js|tools-home\\.js|tools\\.html|leadsignal\\.html|signalpilot\\.html|signalpilot-app\\.js|start-here\\.html|compare\\.html|about\\.html|faq\\.html|contact\\.html|privacy\\.html|terms\\.html|business-tools|finance-templates|adhd-study-tools|offer-validation-tools|b2b-decision-tools|ai-automation-guides|free-resources).*)",
       "destination": "/index.html"
     }
   ]

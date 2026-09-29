@@ -1,0 +1,13 @@
+{
+  "products_extracted": 22,
+  "product_pages": 22,
+  "categories": ["business-tools", "finance-templates", "adhd-study-tools", "offer-validation-tools", "b2b-decision-tools", "ai-automation-guides"],
+  "sitemap_urls": 52,
+  "url_pattern": "/products/{slug} via products/{slug}/index.html",
+  "skipped": {
+    "tools_category": "Uses existing /tools.html",
+    "marketing_studio": "Phase A out of scope",
+    "spa_rebuild": "Not rebuilt",
+    "fake_stats": "SPA stats section not patched without source rebuild"
+  }
+}
