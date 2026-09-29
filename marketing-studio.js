@@ -1,7 +1,9 @@
 (function () {
   "use strict";
   var STORAGE_KEY = "izo_marketing_studio_v1";
-  var MODE = "test";
+  var MODE_CLIENT = "test";
+  var currentApproved = false;
+  var pinterestStatus = { configured: false, connected: false, mode: "test" };
 
   function $(id) { return document.getElementById(id); }
   function products() {
@@ -11,9 +13,7 @@
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
     catch (e) { return {}; }
   }
-  function saveState(s) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
-  }
+  function saveState(s) { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
   function ensureLog(state) {
     if (!Array.isArray(state.log)) state.log = [];
     return state;
@@ -22,6 +22,10 @@
     if (!p || !p.name) return "https://izo-king-studio.vercel.app/";
     var slug = String(p.name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
     return "https://izo-king-studio.vercel.app/products/" + slug;
+  }
+  function productImage(p) {
+    if (p && p.img && /^https:\/\//i.test(p.img)) return p.img;
+    return "https://izo-king-studio.vercel.app/1-3-1000061052.jpg";
   }
   function selectedProduct() {
     var id = $("product").value;
@@ -53,8 +57,6 @@
     $("product-meta").textContent = (p.cat || "") + " · " + (p.type || "") + " · Catalogue price: " + (p.price || "Check current price");
     $("dest").value = productPageUrl(p);
   }
-
-  var currentApproved = false;
 
   function generateDraft() {
     var p = selectedProduct();
@@ -121,6 +123,7 @@
     currentApproved = false;
     $("btn-schedule").disabled = true;
     $("btn-publish").disabled = true;
+    $("btn-publish-pinterest").disabled = true;
   }
 
   function setStatus(st) {
@@ -130,6 +133,7 @@
       approved: "status-approved",
       scheduled: "status-scheduled",
       "published-mock": "status-published-mock",
+      published: "status-published-mock",
       failed: "status-failed"
     };
     el.innerHTML = 'Status: <span class="status ' + (map[st] || "status-draft") + '">' + st + "</span>";
@@ -141,11 +145,11 @@
     var h = $("hashtags").value || "";
     var d = $("dest").value || "";
     $("preview").textContent =
-      "[" + platform.toUpperCase() + " · TEST MODE]\n\n" +
+      "[" + platform.toUpperCase() + "]\n\n" +
       t + "\n\n" + b + (h ? "\n\n" + h : "") + "\n\nURL: " + d;
   }
 
-  function logEntry(status) {
+  function logEntry(status, extra) {
     var p = selectedProduct();
     if (!p) return;
     var state = ensureLog(loadState());
@@ -158,7 +162,8 @@
       campaign: $("campaign").value || "",
       status: status,
       title: $("title").value || "",
-      mode: MODE
+      extra: extra || null,
+      mode: MODE_CLIENT
     });
     state.log = state.log.slice(0, 100);
     saveState(state);
@@ -186,7 +191,7 @@
   }
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
-      return ({ "&": "&", "<": "<", ">": ">", '"': """, "'": "&#39;" })[c];
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
     });
   }
 
@@ -196,24 +201,149 @@
     setStatus("approved");
     $("btn-schedule").disabled = false;
     $("btn-publish").disabled = false;
+    updatePinterestPublishButton();
     logEntry("approved");
   }
   function scheduleMock() {
     if (!currentApproved) { alert("Approve first."); return; }
     setStatus("scheduled");
     logEntry("scheduled");
-    alert("Scheduled in test mode only (this browser). No live API call.");
+    alert("Scheduled in browser log only. Live publish needs MARKETING_MODE=production + connected Pinterest.");
   }
   function publishMock() {
     if (!currentApproved) { alert("Approve first."); return; }
     setStatus("published-mock");
     logEntry("published-mock");
-    alert("Mock publish complete. Nothing was sent to social networks.");
+    alert("Mock only. Use Publish to Pinterest after connecting and MARKETING_MODE=production.");
   }
+
+  function updatePinterestPublishButton() {
+    var btn = $("btn-publish-pinterest");
+    if (!btn) return;
+    var ok =
+      currentApproved &&
+      $("platform").value === "pinterest" &&
+      pinterestStatus.connected &&
+      pinterestStatus.productionEnabled;
+    btn.disabled = !ok;
+  }
+
+  function refreshPinterestStatus() {
+    var pill = $("pinterest-pill");
+    var detail = $("pinterest-detail");
+    var boardWrap = $("pinterest-board-wrap");
+    fetch("/api/oauth/pinterest/status", { credentials: "same-origin" })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        pinterestStatus = j || {};
+        if (!j.configured) {
+          pill.textContent = "Not configured";
+          pill.className = "pill";
+          detail.textContent = "Add PINTEREST_CLIENT_ID and PINTEREST_CLIENT_SECRET in Vercel, then redeploy.";
+          $("btn-pinterest-connect").disabled = true;
+          $("btn-pinterest-disconnect").disabled = true;
+        } else if (j.connected) {
+          pill.textContent = "Connected" + (j.username ? " · @" + j.username : "");
+          pill.className = "pill ok";
+          detail.textContent =
+            "Server mode: " + (j.mode || "test") +
+            (j.productionEnabled
+              ? " — live publish allowed after Approve."
+              : " — set MARKETING_MODE=production for live Pins.");
+          $("btn-pinterest-connect").disabled = true;
+          $("btn-pinterest-disconnect").disabled = false;
+          boardWrap.classList.remove("hidden");
+          loadBoards();
+        } else {
+          pill.textContent = "Configured · not connected";
+          pill.className = "pill";
+          detail.textContent = "Click Connect Pinterest to authorize boards and pins write.";
+          $("btn-pinterest-connect").disabled = false;
+          $("btn-pinterest-disconnect").disabled = true;
+          boardWrap.classList.add("hidden");
+        }
+        updatePinterestPublishButton();
+      })
+      .catch(function () {
+        pill.textContent = "Status unavailable";
+        pill.className = "pill";
+        detail.textContent = "Could not reach /api/oauth/pinterest/status.";
+      });
+  }
+
+  function loadBoards() {
+    var sel = $("pinterest-board");
+    sel.innerHTML = '<option value="">Loading boards…</option>';
+    fetch("/api/oauth/pinterest/boards", { credentials: "same-origin" })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (x) {
+        sel.innerHTML = "";
+        if (!x.ok || !x.j.boards || !x.j.boards.length) {
+          sel.innerHTML = '<option value="">No boards found</option>';
+          return;
+        }
+        x.j.boards.forEach(function (b) {
+          var o = document.createElement("option");
+          o.value = b.id;
+          o.textContent = b.name + (b.privacy ? " (" + b.privacy + ")" : "");
+          sel.appendChild(o);
+        });
+      })
+      .catch(function () {
+        sel.innerHTML = '<option value="">Failed to load boards</option>';
+      });
+  }
+
+  function publishPinterestLive() {
+    if (!currentApproved) { alert("Approve first."); return; }
+    if ($("platform").value !== "pinterest") {
+      alert("Set Platform to Pinterest.");
+      return;
+    }
+    var boardId = $("pinterest-board") && $("pinterest-board").value;
+    if (!boardId) {
+      alert("Select a Pinterest board.");
+      return;
+    }
+    var p = selectedProduct();
+    var payload = {
+      board_id: boardId,
+      title: ($("title").value || "").slice(0, 100),
+      description: (($("body").value || "") + "\n" + ($("hashtags").value || "")).trim().slice(0, 500),
+      link: $("dest").value || productPageUrl(p),
+      image_url: productImage(p)
+    };
+    $("btn-publish-pinterest").disabled = true;
+    fetch("/api/marketing/publish-pinterest", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (x) {
+        if (x.ok && x.j.ok) {
+          setStatus("published");
+          logEntry("published", { pin_id: x.j.pin_id });
+          alert("Pin created on Pinterest. ID: " + (x.j.pin_id || "ok"));
+        } else {
+          setStatus("failed");
+          logEntry("failed", x.j);
+          alert("Publish failed: " + JSON.stringify(x.j));
+        }
+      })
+      .catch(function (e) {
+        setStatus("failed");
+        alert("Network error: " + e);
+      })
+      .finally(function () {
+        updatePinterestPublishButton();
+      });
+  }
+
   function exportJson() {
     var p = selectedProduct();
     var payload = {
-      mode: MODE,
       product: p,
       platform: $("platform").value,
       campaign: $("campaign").value,
@@ -224,9 +354,9 @@
       body: $("body").value,
       hashtags: $("hashtags").value,
       destinationUrl: $("dest").value,
+      image_url: productImage(p),
       scheduleDate: $("sched-date").value,
-      scheduleTime: $("sched-time").value,
-      note: "Manual posting only until OAuth is configured."
+      scheduleTime: $("sched-time").value
     };
     var blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
     var a = document.createElement("a");
@@ -253,14 +383,17 @@
       $("tab-queue").classList.toggle("hidden", id !== "queue");
       $("tab-integrations").classList.toggle("hidden", id !== "integrations");
       if (id === "queue") renderLog();
+      if (id === "integrations") refreshPinterestStatus();
     });
   });
 
   $("product").addEventListener("change", onProductChange);
+  $("platform").addEventListener("change", updatePinterestPublishButton);
   $("btn-generate").addEventListener("click", generateDraft);
   $("btn-approve").addEventListener("click", approve);
   $("btn-schedule").addEventListener("click", scheduleMock);
   $("btn-publish").addEventListener("click", publishMock);
+  $("btn-publish-pinterest").addEventListener("click", publishPinterestLive);
   $("btn-copy").addEventListener("click", copyText);
   $("btn-export").addEventListener("click", exportJson);
   $("title").addEventListener("input", updatePreview);
@@ -275,6 +408,7 @@
     setStatus("draft");
     $("btn-schedule").disabled = true;
     $("btn-publish").disabled = true;
+    updatePinterestPublishButton();
     updatePreview();
   });
   $("btn-refresh-log").addEventListener("click", renderLog);
@@ -291,6 +425,26 @@
     }
   });
 
+  $("btn-pinterest-connect").addEventListener("click", function () {
+    window.location.href = "/api/oauth/pinterest/start";
+  });
+  $("btn-pinterest-disconnect").addEventListener("click", function () {
+    fetch("/api/oauth/pinterest/disconnect", { method: "POST", credentials: "same-origin" })
+      .then(function () { refreshPinterestStatus(); });
+  });
+  $("btn-pinterest-refresh").addEventListener("click", refreshPinterestStatus);
+
+  try {
+    var q = new URLSearchParams(window.location.search);
+    if (q.get("pinterest") === "connected") {
+      history.replaceState({}, "", "/marketing-studio");
+    } else if (q.get("pinterest") === "error") {
+      alert("Pinterest connect error: " + (q.get("msg") || "unknown"));
+      history.replaceState({}, "", "/marketing-studio");
+    }
+  } catch (e) {}
+
   fillProducts();
   renderLog();
+  refreshPinterestStatus();
 })();
