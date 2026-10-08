@@ -24,9 +24,8 @@ ul{list-style:none;padding:0}li{border-bottom:1px solid #e4ddd2;padding:12px 0;d
 <div class="wrap">
 <div class="nav"><a href="/">Home</a><a href="/#shop">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
 <h1>Product delivery</h1>
-<p>After Payhip payment, links are emailed automatically when delivery is configured. You can also request links below with your claim code.</p>
-<div class="note">Claim code (share with buyers after payment): <strong>IZO-DELIVER-2026</strong>. Open any file → <strong>File → Make a copy</strong>.</div>
-
+<p>After Payhip payment, file links can be emailed automatically. You can also request links with your claim code.</p>
+<div class="note">Claim code: <strong>IZO-DELIVER-2026</strong> — open any file then <strong>File → Make a copy</strong>.</div>
 <h2>Email my links</h2>
 <form id="claim">
 <label>Email</label>
@@ -47,11 +46,10 @@ ul{list-style:none;padding:0}li{border-bottom:1px solid #e4ddd2;padding:12px 0;d
 <option value="offer-test-7">7-Day Offer Test</option>
 </select>
 <label>Claim code</label>
-<input type="text" name="code" required placeholder="IZO-DELIVER-2026" />
+<input type="text" name="code" required value="IZO-DELIVER-2026" />
 <button type="submit">Send links to my email</button>
 <p id="msg"></p>
 </form>
-
 <h2>Direct links</h2>
 <ul>
 <li><span>Freelancer CRM</span><a class="btn" href="https://docs.google.com/spreadsheets/d/1_0zrFWIQUJaanPyzfyCWBZ6LtqxNVIL3eRPl7kHABBw/edit" target="_blank" rel="noopener">Open</a></li>
@@ -75,10 +73,11 @@ document.getElementById("claim").addEventListener("submit", async function (e) {
   msg.textContent = "Sending…";
   var fd = new FormData(e.target);
   try {
-    var r = await fetch("/api/delivery", {
+    var r = await fetch("/api/daily-insight", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        action: "delivery",
         email: fd.get("email"),
         product: fd.get("product"),
         code: fd.get("code"),
@@ -86,7 +85,7 @@ document.getElementById("claim").addEventListener("submit", async function (e) {
     });
     var j = await r.json();
     if (!r.ok) throw new Error(j.error || "Failed");
-    msg.textContent = "Sent to " + j.emailed + (j.mail && j.mail.note ? " — " + j.mail.note : "");
+    msg.textContent = "Sent to " + j.emailed + (j.mail && j.mail.note ? " — " + j.mail.note : ". Check inbox/spam.");
   } catch (err) {
     msg.textContent = err.message || "Could not send";
   }
