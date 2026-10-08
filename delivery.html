@@ -4,31 +4,60 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Product delivery — IZO-KING Studio</title>
-<meta name="description" content="Download IZO-KING digital product files from Google Drive. Independent of Shopify checkout — ready if the store is frozen." />
+<meta name="description" content="Download IZO-KING digital product files from Google Drive. After payment, links are emailed automatically when delivery is configured." />
 <link rel="canonical" href="https://izo-king-studio.vercel.app/delivery.html" />
 <meta name="robots" content="index,follow" />
-<meta property="og:title" content="Product delivery — IZO-KING Studio" />
-<meta property="og:description" content="Get your IZO-KING tools from Google Drive without depending on Shopify." />
-<meta property="og:url" content="https://izo-king-studio.vercel.app/delivery.html" />
 <style>
 body{font-family:Georgia,serif;background:#FAF9F6;color:#252525;line-height:1.55;margin:0}
 .wrap{max-width:720px;margin:0 auto;padding:40px 20px}
 a{color:#315C4A}.nav a{margin-right:14px;color:#5c5c5c;font-size:14px;text-decoration:none}
-h1{font-size:28px;color:#111827;margin:20px 0 12px}
+h1{font-size:28px;color:#111827;margin:20px 0 12px}h2{font-size:20px;color:#111827;margin:28px 0 12px}
 .note{background:#F1EDE5;border-radius:12px;padding:14px 16px;margin:16px 0;font-size:14px}
 ul{list-style:none;padding:0;margin:24px 0}
 li{border-bottom:1px solid #e4ddd2;padding:12px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
 li span{font-weight:600;color:#111827}
 .btn{display:inline-block;background:#315C4A;color:#fff!important;text-decoration:none;padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600}
-.folder{margin-top:28px}
+label{display:block;font-size:13px;font-weight:600;margin:12px 0 4px}
+input,select{width:100%;padding:10px 12px;border:1px solid rgba(17,24,39,.12);border-radius:10px;font:inherit;background:#fff;box-sizing:border-box}
+button{margin-top:14px;background:#111827;color:#FAF9F6;border:none;padding:12px 18px;border-radius:999px;font-weight:600;cursor:pointer}
+#msg{margin-top:12px;font-size:14px}
 </style>
 </head>
 <body>
 <div class="wrap">
 <div class="nav"><a href="/">Home</a><a href="/#shop">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div>
 <h1>Product delivery</h1>
-<p>If Shopify is frozen or checkout fails, use the Google Sheets below. Open a file, then <strong>File → Make a copy</strong> to keep your own version.</p>
-<div class="note">These are working starter systems (clients, cash, planners, scope scripts). Email <a href="mailto:maanizozo9@gmail.com">maanizozo9@gmail.com</a> with your order if you need help.</div>
+<p>After a successful Payhip payment, your file links are emailed automatically (when delivery email is configured). You can also open files below — use <strong>File → Make a copy</strong>.</p>
+<div class="note">Shopify frozen? Use the links below or the claim form if you received a claim code with your order. Help: <a href="mailto:maanizozo9@gmail.com">maanizozo9@gmail.com</a></div>
+
+<h2>Email my links</h2>
+<form id="claim">
+<label>Email used at checkout</label>
+<input type="email" name="email" required placeholder="you@email.com" />
+<label>Product</label>
+<select name="product" required>
+<option value="freelancer-crm">Freelancer CRM &amp; Invoice Tracker</option>
+<option value="study-start">Study Start</option>
+<option value="clear-start">Clear Start planner</option>
+<option value="morning-routine">Morning Routine</option>
+<option value="productivity-pack">Productivity Pack</option>
+<option value="finance-tracker">Finance Tracker</option>
+<option value="gentle-reset">Gentle Reset</option>
+<option value="proposal-scope">Proposal &amp; Scope Kit</option>
+<option value="anti-scope">Anti-Scope Scripts</option>
+<option value="freedom-ledger">Freedom Ledger</option>
+<option value="cash-flow-13">13-Week Cash Flow</option>
+<option value="offer-test-7">7-Day Offer Test</option>
+</select>
+<label>Claim code (from order email / support)</label>
+<input type="text" name="code" required placeholder="Your claim code" autocomplete="off" />
+<label>Order reference (optional)</label>
+<input type="text" name="order" placeholder="Order ID" />
+<button type="submit">Send links to my email</button>
+<p id="msg"></p>
+</form>
+
+<h2>Direct file links</h2>
 <ul>
 <li><span>Freelancer CRM &amp; Invoice Tracker</span><a class="btn" href="https://docs.google.com/spreadsheets/d/1_0zrFWIQUJaanPyzfyCWBZ6LtqxNVIL3eRPl7kHABBw/edit" target="_blank" rel="noopener">Open</a></li>
 <li><span>Study Start — Exam &amp; Revision</span><a class="btn" href="https://docs.google.com/spreadsheets/d/1L8CGdGcV4828zHh7FlvLGm4CJv6tkFZu_zsFYRigx5s/edit" target="_blank" rel="noopener">Open</a></li>
@@ -43,8 +72,33 @@ li span{font-weight:600;color:#111827}
 <li><span>13-Week Cash Flow</span><a class="btn" href="https://docs.google.com/spreadsheets/d/1hyJfUppSIL7tWxsOsIMYd5Am3GuMEvN9OkXcXkjtuf0/edit" target="_blank" rel="noopener">Open</a></li>
 <li><span>7-Day Offer Test Checklist</span><a class="btn" href="https://docs.google.com/spreadsheets/d/1JrxAOVo2eMCfFKMiefGBqgcRZ9Si_0qXgq2Hj48Rvkc/edit" target="_blank" rel="noopener">Open</a></li>
 </ul>
-<p class="folder">Full folder: <a href="https://drive.google.com/drive/folders/1Ntk-SgaNDTvhB0slhXXl0aVqZT65loHp" target="_blank" rel="noopener">IZO-KING Product Files on Google Drive</a></p>
-<p style="font-size:13px;color:#5c5c5c">Tip: In Drive, set sharing to “Anyone with the link → Viewer” if a buyer cannot open a file.</p>
+<p>Full folder: <a href="https://drive.google.com/drive/folders/1Ntk-SgaNDTvhB0slhXXl0aVqZT65loHp" target="_blank" rel="noopener">IZO-KING Product Files</a></p>
 </div>
+<script>
+document.getElementById("claim").addEventListener("submit", async function (e) {
+  e.preventDefault();
+  var msg = document.getElementById("msg");
+  msg.textContent = "Sending…";
+  var fd = new FormData(e.target);
+  var body = {
+    email: fd.get("email"),
+    product: fd.get("product"),
+    code: fd.get("code"),
+    order: fd.get("order") || "",
+  };
+  try {
+    var r = await fetch("/api/claim-delivery", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    var j = await r.json();
+    if (!r.ok) throw new Error(j.error || "Failed");
+    msg.textContent = "Sent. Check your inbox (and spam) for: " + (j.products || []).join(", ");
+  } catch (err) {
+    msg.textContent = err.message || "Could not send";
+  }
+});
+</script>
 </body>
 </html>
