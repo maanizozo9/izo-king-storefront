@@ -5,6 +5,33 @@
       "schedule": "0 8 * * *"
     }
   ],
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy.html",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/delivery",
@@ -99,8 +126,24 @@
       "destination": "/delivery.html"
     },
     {
-      "source": "/((?!api/|index-|whop-|cta-|favicon|robots|sitemap|1-3-|brand/|blog/|guides/|products/|izo-|products\\.js|tools-home\\.js|tools\\.html|leadsignal\\.html|signalpilot\\.html|signalpilot-app\\.js|start-here\\.html|compare\\.html|about\\.html|faq\\.html|contact\\.html|privacy\\.html|terms\\.html|delivery\\.html|business-tools|finance-templates|adhd-study-tools|offer-validation-tools|b2b-decision-tools|ai-automation-guides|free-resources|marketing-studio|delivery).*)",
-      "destination": "/index.html"
+      "source": "/shop",
+      "destination": "/shop.html"
+    },
+    {
+      "source": "/shop/",
+      "destination": "/shop.html"
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/policy-shell.html"
+    },
+    {
+      "source": "/refund-policy",
+      "destination": "/policy-shell.html"
+    },
+    {
+      "source": "/license",
+      "destination": "/policy-shell.html"
     }
   ]
 }
