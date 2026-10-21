@@ -1,0 +1,12 @@
+# IZO-KING
+> One-time digital tools for freelancers, students and small businesses, plus B2B software.
+
+Site: https://izo-king-studio.vercel.app/
+Shop: https://izo-king-studio.vercel.app/shop
+Start here: https://izo-king-studio.vercel.app/start-here.html
+Tools: https://izo-king-studio.vercel.app/tools.html
+SignalPilot: https://izo-king-studio.vercel.app/signalpilot.html
+Insights: https://izo-king-studio.vercel.app/blog/
+
+Checkout is on Whop or Payhip. The old Shopify store is closed. Files are delivered after payment, not as public downloads.
+Contact: maanizozo9@gmail.com
